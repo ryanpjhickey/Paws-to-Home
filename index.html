@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<header>
+<style>
+.catsordogs {
+  background-color: #800010;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+.catsordogs:hover, .catsordogs:focus {
+  background-color: #700000;
+}
+
+.catsdogsboth {
+  position: relative;
+  display: inline-block;
+}
+
+.catsdogsboth-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.catsdogsboth-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.catsdogsboth-content a:hover {background-color: #ddd}
+
+.show {display:block;}
+</style>
+</header>
+
+<body>
+<div class="catsdogsboth">
+  <button onclick="myFunction()" class="catsordogs">Cats or Dogs?</button>
+  <div id="catdogtoggledisplay" class="catsdogsboth-content">
+    <a href="#">Cats</a>
+    <a href="#">Dogs</a>
+    <a href="#">Both!</a>
+  </div>
+</div>
+
+<script>
+function myFunction() {
+  document.getElementById("catdogtoggledisplay").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.catsordogs')) {
+    var catdotdd= document.getElementsByClassName("catsdogsboth-content");
+    var i;
+    for (i = 0; i < catdogdd.length; i++) {
+      var catdogopen = catdogdd[i];
+      if (catdogopen.classList.contains('show')) {
+        catdogopen.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
