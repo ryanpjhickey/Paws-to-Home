@@ -81,6 +81,8 @@ function logAPI() {
 
             if (data.animals[index].photos.length === 0) {
                 continue
+            } else if (data.animals[index].contact.email && data.animals[index].contact.phone === null) {
+                continue
             }
             else {
                 var petPhoto = data.animals[index].photos[0].full
