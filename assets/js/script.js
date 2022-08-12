@@ -3,6 +3,7 @@ var userName = "oVZ5FdhYCgBs9YDLsTt3ue4B1vfLHZZE68Knl3asVI8Je1u49J"; // app clie
 var passWord = "q41oLHMowHzg43asWLf72FJgRTMleScmdXAXeiiD"; // app clientSecret
 var petFinderURL = "https://api.petfinder.com/v2/oauth2/token"; // Your application token endpoint  
 var request = new XMLHttpRequest();
+var namel = document.querySelector('#name')
 
 function getToken(url, clientID, clientSecret) {
     var key;
@@ -21,7 +22,7 @@ function getToken(url, clientID, clientSecret) {
 // Get the token
 
 function logAPI() {
-    fetch('https://api.petfinder.com/v2/animals?type=dog&page=2', {
+    fetch('https://api.petfinder.com/v2/animals?location=94534&distance=25&limit=5&status=adoptable', {
         headers: {
             'Authorization': `Bearer ${token_}`
         }
@@ -31,7 +32,19 @@ function logAPI() {
         }
         throw response;
     }).then(function (data) {
-        console.log(data);
+        console.log(data.animals);
+        for (let index = 0; index < data.animals.length; index++) {
+            var petName = data.animals[index].name
+            var petAge = data.animals[index].age
+            var petDistance = data.animals[index].distance
+            // var petPhoto = data.animals[index].photos[0].full
+            var petEmail = data.animals[index].contact.email
+            var petPhone = data.animals[index].contact.phone
+            var petSpecies = data.animals[index].species
+            var cardTemplate =
+                `<h1> ${petName} </h1>`;
+            namel.append(cardTemplate)
+        }
     }).catch(function (error) {
         console.warn(error);
     });
