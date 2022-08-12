@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Paws-to-Home</title>
+		<link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
+		<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+        <!-- <link rel="stylesheet" href="./assets/style.css"> -->
+
+<style>
+    .center {
+        font-weight: bold;
+        font-size: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+
+    .column-text {
+        text-align: center;
+        padding: 5px;
+        font-weight: bold;
+    }
+/* 
+    .select {
+        align-content: center;
+    } */
+
+</style>
+	</head>
+	<body>
+
+
+
+        <!-- .hero -->
+        <section class="hero has-background-black">
+            <div class="hero-body">
+                <div class="container">
+                    <p class="center">Paws-To-Home</p>
+                </div>
+            </div>
+        </section>
+        <!-- /.hero -->
+
+
+        <!-- .section -->
+        <section class="section">
+            <!-- .type -->
+            <div class="container">
+                <div class="columns">
+                    <div class="column">
+                        <div class="notification">
+                        <p class="column-text">Search by type of animal</p>
+                        <div class="select is-success is-medium is-rounded">
+                            <select>
+                              <option>Select animal</option>
+                              <option>Cat</option>
+                              <option>Dog</option>
+                              <option>Other</option>
+                            </select>
+                          </div>
+                        </div>
+                    </div>
+                    <!-- /.type -->
+
+                    <!-- /zip -->
+                    <div class="column">
+                        <div class="notification">
+                            <p class="column-text">Search by Zip code</p>
+                            <input class="input is-primary is-medium is-success is-rounded" type="text" placeholder="Zip code here">
+                        </div>
+                    </div>
+                    <!-- /.zip -->
+
+                    <!-- .lost pet -->
+                    <div class="column">
+                        <div class="notification">
+                        <p class="column-text">Report lost/found animal</p>
+                        <div class="select is-danger is-medium is-rounded drop-down">
+                            <select>
+                              <option>Lost/Found</option>
+                              <option>I lost an animal</option>
+                              <option>I found an animal</option>
+                            </select>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.lost pet -->
+                
+            </div>
+        </section>
+        <!-- /.section -->
+
+	</body>
+</html>
