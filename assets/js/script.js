@@ -4,6 +4,9 @@ var passWord = "q41oLHMowHzg43asWLf72FJgRTMleScmdXAXeiiD"; // app clientSecret
 var petFinderURL = "https://api.petfinder.com/v2/oauth2/token"; // Your application token endpoint  
 var request = new XMLHttpRequest();
 var petListing = document.querySelector('#petListing')
+var zipcode = document.querySelector('#zip')
+var petType = document.querySelector('.petType')
+var petAgeFilter = document.querySelector('.petAgeFilter')
 
 function getToken(url, clientID, clientSecret) {
     var key;
@@ -22,13 +25,37 @@ function getToken(url, clientID, clientSecret) {
 // Get the token
 
 function logAPI() {
-    fetch('https://api.petfinder.com/v2/animals?location=94534&distance=25&limit=10&status=adoptable', {
+    if (petType.value == 'Any animal') {
+        var apiUrl = 'https://api.petfinder.com/v2/animals?distance=25&limit=12&status=adoptable&location=' + zipcode.value.trim()
+    }
+    else if (petType.value == 'Cats') {
+        var apiUrl = 'https://api.petfinder.com/v2/animals?distance=25&limit=12&status=adoptable&location=' + zipcode.value.trim() + '&type=cat'
+    }
+    else if (petType.value == 'Dogs') {
+        var apiUrl = 'https://api.petfinder.com/v2/animals?distance=25&limit=12&status=adoptable&location=' + zipcode.value.trim() + '&type=dog'
+    }
+    if (petAgeFilter.value == 'Any age') {
+        var apiUrlFinal = apiUrl
+    }
+    else if (petAgeFilter.value == 'BABY') {
+        var apiUrlFinal = apiUrl + '&age=baby,young'
+    }
+    else if (petAgeFilter.value == 'ADULT') {
+        var apiUrlFinal = apiUrl + '&age=adult'
+    }
+    else if (petAgeFilter.value == 'SENIOR') {
+        var apiUrlFinal = apiUrl + '&age=senior'
+    }
+    fetch(apiUrlFinal, {
         headers: {
             'Authorization': `Bearer ${token_}`
         }
     }).then(function (response) {
         if (response.ok) {
+            document.querySelector('#invalid').style.display = 'none';
             return response.json();
+        } else {
+            document.querySelector('#invalid').style.display = 'inline';
         }
         throw response;
     }).then(function (data) {
