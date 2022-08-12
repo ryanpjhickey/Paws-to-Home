@@ -31,3 +31,17 @@ img {
     color:black;
     font-weight: bold;
 }
+
+.submit {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   padding: 15px;
+}
+
+.what-we-do {
+    display: flex;
+    flex: row;
+    justify-content: center;
+}
