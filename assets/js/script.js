@@ -70,7 +70,6 @@ function logAPI() {
             var petSpecies = data.animals[index].species
             var cardTemplate =
                 `${petName}`;
-            var petsec = document.createElement('section')
             var peth1 = document.createElement('h1')
             var petdiv = document.createElement('div')
             var petimg = document.createElement('img')
@@ -78,6 +77,7 @@ function logAPI() {
             var petInfoAge = document.createElement('p')
             var petInfoDist = document.createElement('p')
             var petInfoContact = document.createElement('p')
+            var petsec = document.createElement('section')
 
             if (data.animals[index].photos.length === 0) {
                 continue
