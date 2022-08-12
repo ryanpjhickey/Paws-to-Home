@@ -1,0 +1,33 @@
+.center {
+    font-weight: bold;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.column-text {
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+}
+
+img {
+    
+    text-align:center;
+    margin: 0 auto;
+    padding:0px;
+    height:400px;
+
+}
+
+.navbar-menu {
+    color:black;
+    font-size: 25px;
+}
+
+.navbar-dropdown {
+    color:black;
+    font-weight: bold;
+}
