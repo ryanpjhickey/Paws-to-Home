@@ -3,7 +3,7 @@ var userName = "oVZ5FdhYCgBs9YDLsTt3ue4B1vfLHZZE68Knl3asVI8Je1u49J"; // app clie
 var passWord = "q41oLHMowHzg43asWLf72FJgRTMleScmdXAXeiiD"; // app clientSecret
 var petFinderURL = "https://api.petfinder.com/v2/oauth2/token"; // Your application token endpoint  
 var request = new XMLHttpRequest();
-var namel = document.querySelector('#name')
+var petListing = document.querySelector('#petListing')
 
 function getToken(url, clientID, clientSecret) {
     var key;
@@ -22,7 +22,7 @@ function getToken(url, clientID, clientSecret) {
 // Get the token
 
 function logAPI() {
-    fetch('https://api.petfinder.com/v2/animals?location=94534&distance=25&limit=5&status=adoptable', {
+    fetch('https://api.petfinder.com/v2/animals?location=94534&distance=25&limit=10&status=adoptable', {
         headers: {
             'Authorization': `Bearer ${token_}`
         }
@@ -37,13 +37,58 @@ function logAPI() {
             var petName = data.animals[index].name
             var petAge = data.animals[index].age
             var petDistance = data.animals[index].distance
-            // var petPhoto = data.animals[index].photos[0].full
             var petEmail = data.animals[index].contact.email
             var petPhone = data.animals[index].contact.phone
             var petSpecies = data.animals[index].species
             var cardTemplate =
-                `<h1> ${petName} </h1>`;
-            namel.append(cardTemplate)
+                `${petName}`;
+            var peth1 = document.createElement('h1')
+            var petdiv = document.createElement('div')
+            var petimg = document.createElement('img')
+            var petInfoSpecies = document.createElement('p')
+            var petInfoAge = document.createElement('p')
+            var petInfoContact = document.createElement('p')
+            var petInfoPhone = document.createElement('span')
+
+            if (data.animals[index].photos.length === 0) {
+                continue
+            }
+            else {
+                var petPhoto = data.animals[index].photos[0].full
+                petListing.appendChild(peth1)
+                peth1.append(cardTemplate)
+                peth1.append(petdiv)
+                petdiv.append(petimg)
+                petimg.src = petPhoto
+                petdiv.append(petInfoSpecies)
+                petdiv.append(petInfoAge)
+                petdiv.append(petInfoContact)
+                petInfoSpecies.textContent = `Species: ${petSpecies}`
+                petInfoAge.textContent = `Age: ${petAge}`
+                if (data.animals[index].contact.email === null) {
+                    return
+                }
+                else {
+                    petInfoContact.textContent = `Contact: ${petEmail}`
+                    if (data.animals[index].contact.phone === null) {
+                    }
+                    else {
+                        petInfoContact.textContent = `Contact: ${petEmail} ${petPhone}`
+                    }
+                }
+                if (data.animals[index].contact.phone === null) {
+                }
+                else {
+                    petInfoContact.textContent = `Contact: ${petPhone}`
+                    if (data.animals[index].contact.email === null) {
+                        return
+                    }
+                    else {
+                        petInfoContact.textContent = `Contact: ${petEmail} ${petPhone}`
+                    }
+                }
+
+            }
         }
     }).catch(function (error) {
         console.warn(error);
