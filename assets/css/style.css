@@ -1,0 +1,19 @@
+.center {
+    font-weight: bold;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: orange;
+}
+
+.column-text {
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+}
+
+img {
+    display: flex;
+    height: 400px;
+}
