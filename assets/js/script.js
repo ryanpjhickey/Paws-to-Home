@@ -37,31 +37,38 @@ function logAPI() {
             var petName = data.animals[index].name
             var petAge = data.animals[index].age
             var petDistance = data.animals[index].distance
+            // var petDistanceShort = petDistanceFull.splice(0, 2)
             var petEmail = data.animals[index].contact.email
             var petPhone = data.animals[index].contact.phone
             var petSpecies = data.animals[index].species
             var cardTemplate =
                 `${petName}`;
+            var petsec = document.createElement('section')
             var peth1 = document.createElement('h1')
             var petdiv = document.createElement('div')
             var petimg = document.createElement('img')
             var petInfoSpecies = document.createElement('p')
             var petInfoAge = document.createElement('p')
+            var petInfoDist = document.createElement('p')
             var petInfoContact = document.createElement('p')
-            var petInfoPhone = document.createElement('span')
 
             if (data.animals[index].photos.length === 0) {
                 continue
             }
             else {
                 var petPhoto = data.animals[index].photos[0].full
-                petListing.appendChild(peth1)
-                peth1.append(cardTemplate)
-                peth1.append(petdiv)
+                petListing.appendChild(petsec)
+                peth1.className = 'flexPets-h1'
+                petsec.append(peth1)
+                petsec.className = 'card column is-one-third'
+                peth1.textContent = cardTemplate
+                petsec.append(petdiv)
                 petdiv.append(petimg)
                 petimg.src = petPhoto
                 petdiv.append(petInfoSpecies)
                 petdiv.append(petInfoAge)
+                petdiv.append(petInfoDist)
+                petInfoDist.textContent = `${petDistance} miles away from your zipcode`
                 petdiv.append(petInfoContact)
                 petInfoSpecies.textContent = `Species: ${petSpecies}`
                 petInfoAge.textContent = `Age: ${petAge}`
