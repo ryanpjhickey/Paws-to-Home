@@ -26,6 +26,7 @@ function getToken(url, clientID, clientSecret) {
 // Get the token
 
 function logAPI() {
+    petListing.replaceChildren()
     if (petType.value == 'Any animal') {
         var apiUrl = 'https://api.petfinder.com/v2/animals?distance=25&limit=5&status=adoptable&location=' + zipcode.value.trim()
     }
