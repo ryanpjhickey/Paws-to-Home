@@ -26,15 +26,16 @@ function getToken(url, clientID, clientSecret) {
 // Get the token
 
 function logAPI() {
+    let counter = 0
     petListing.replaceChildren()
     if (petType.value == 'Any animal') {
-        var apiUrl = 'https://api.petfinder.com/v2/animals?distance=25&limit=100&status=adoptable&location=' + zipcode.value.trim()
+        var apiUrl = 'https://api.petfinder.com/v2/animals?distance=500&limit=100&status=adoptable&location=' + zipcode.value.trim()
     }
     else if (petType.value == 'Cats') {
-        var apiUrl = 'https://api.petfinder.com/v2/animals?distance=25&limit=100&status=adoptable&location=' + zipcode.value.trim() + '&type=cat'
+        var apiUrl = 'https://api.petfinder.com/v2/animals?distance=500&limit=100&status=adoptable&location=' + zipcode.value.trim() + '&type=cat'
     }
     else if (petType.value == 'Dogs') {
-        var apiUrl = 'https://api.petfinder.com/v2/animals?distance=25&limit=100&status=adoptable&location=' + zipcode.value.trim() + '&type=dog'
+        var apiUrl = 'https://api.petfinder.com/v2/animals?distance=500&limit=100&status=adoptable&location=' + zipcode.value.trim() + '&type=dog'
     }
     if (petAgeFilter.value == 'Any age') {
         var apiUrlFinal = apiUrl
@@ -80,10 +81,9 @@ function logAPI() {
             var petInfoDist = document.createElement('p')
             var petInfoContact = document.createElement('p')
             var petsec = document.createElement('section')
-
             if (data.animals[index].photos.length === 0) {
                 continue
-            } if (data.animals[index].contact.email === null && data.animals[index].contact.phone === null) {
+            } else if (data.animals[index].contact.email === null && data.animals[index].contact.phone === null) {
                 continue
             }
             else {
@@ -105,27 +105,12 @@ function logAPI() {
                     petdiv.append(petInfoContact)
                     petInfoSpecies.textContent = `Species: ${petSpecies}`
                     petInfoAge.textContent = `Age: ${petAge}`
+                    petInfoContact.textContent = `Contact: ${petEmail} ${petPhone}`
                     if (data.animals[index].contact.email === null) {
-                        return
-                    }
-                    else {
-                        petInfoContact.textContent = `Contact: ${petEmail}`
-                        if (data.animals[index].contact.phone === null) {
-                        }
-                        else {
-                            petInfoContact.textContent = `Contact: ${petEmail} ${petPhone}`
-                        }
-                    }
-                    if (data.animals[index].contact.phone === null) {
-                    }
-                    else {
                         petInfoContact.textContent = `Contact: ${petPhone}`
-                        if (data.animals[index].contact.email === null) {
-                            return
-                        }
-                        else {
-                            petInfoContact.textContent = `Contact: ${petEmail} ${petPhone}`
-                        }
+                    }
+                    else if (data.animals[index].contact.phone === null) {
+                        petInfoContact.textContent = `Contact ${petEmail}`
                     }
                 }
 
