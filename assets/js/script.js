@@ -26,13 +26,13 @@ function getToken(url, clientID, clientSecret) {
 
 function logAPI() {
     if (petType.value == 'Any animal') {
-        var apiUrl = 'https://api.petfinder.com/v2/animals?distance=25&limit=12&status=adoptable&location=' + zipcode.value.trim()
+        var apiUrl = 'https://api.petfinder.com/v2/animals?distance=25&status=adoptable&location=' + zipcode.value.trim()
     }
     else if (petType.value == 'Cats') {
-        var apiUrl = 'https://api.petfinder.com/v2/animals?distance=25&limit=12&status=adoptable&location=' + zipcode.value.trim() + '&type=cat'
+        var apiUrl = 'https://api.petfinder.com/v2/animals?distance=25&status=adoptable&location=' + zipcode.value.trim() + '&type=cat'
     }
     else if (petType.value == 'Dogs') {
-        var apiUrl = 'https://api.petfinder.com/v2/animals?distance=25&limit=12&status=adoptable&location=' + zipcode.value.trim() + '&type=dog'
+        var apiUrl = 'https://api.petfinder.com/v2/animals?distance=25&status=adoptable&location=' + zipcode.value.trim() + '&type=dog'
     }
     if (petAgeFilter.value == 'Any age') {
         var apiUrlFinal = apiUrl
@@ -81,7 +81,7 @@ function logAPI() {
 
             if (data.animals[index].photos.length === 0) {
                 continue
-            } else if (data.animals[index].contact.email && data.animals[index].contact.phone === null) {
+            } if (data.animals[index].contact.email === null && data.animals[index].contact.phone === null) {
                 continue
             }
             else {
@@ -97,7 +97,7 @@ function logAPI() {
                 petdiv.append(petInfoSpecies)
                 petdiv.append(petInfoAge)
                 petdiv.append(petInfoDist)
-                petInfoDist.textContent = `${petDistance} miles away from your zipcode`
+                petInfoDist.textContent = `${petDistance} miles away from ` + zipcode.value.trim()
                 petdiv.append(petInfoContact)
                 petInfoSpecies.textContent = `Species: ${petSpecies}`
                 petInfoAge.textContent = `Age: ${petAge}`
