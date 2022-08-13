@@ -8,31 +8,41 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
 		<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@700&display=swap" rel="stylesheet">
+
+</style>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+
 
 
 	</head>
 	<body>
 
 
-
         <!-- .hero -->
         <section class="hero is-info">
             <div class="hero-body has-text-centered">
                 <div class="container is-fluid">
-                  <img src="./assets/images/andrew-s-ouo1hbizWwo-unsplash.jpg" alt="Cat and dog sitting in a field">
-                    <p class="center">Paws-To-Home</p>
+                  <img class="hero-image" src="./assets/images/andrew-s-ouo1hbizWwo-unsplash.jpg" alt="Cat and dog sitting in a field">
+                    <div class="title">
+                      <img src="./assets/images/title2.png">
+                    <!-- <p class="center">Paws-T<span><img class="heart" src="./assets/images/paw.png"></span>-Home</p> -->
+                  </div>
                 </div>
             </div>
             <!-- Nav-bar -->
             <div class="navbar-menu">
                 <div class="navbar-start">
-                    <a class="navbar-item">
+                    <a class="navbar-item" href="#home">
                         Home
                     </a>
-                    <a class="navbar-item">
+                    <a class="navbar-item" href="#what-we-do">
                         What We Do
                     </a>
-                    <a class="navbar-item">
+                    <a class="navbar-item" href="#adopt">
                         Adopt An Animal
                     </a>
                     
@@ -60,7 +70,7 @@
 
 
         <!-- .section -->
-        <section class="section">
+        <section class="section" id="adopt">
             <!-- .type -->
             <div class="container">
                 <div class="columns">
@@ -72,7 +82,7 @@
                               <option>Select animal</option>
                               <option>Cat</option>
                               <option>Dog</option>
-                              <option>Other</option>
+                              <option>All</option>
                             </select>
                           </div>
                         </div>
@@ -80,7 +90,7 @@
                     <!-- /.type -->
 
                     <!-- /zip -->
-                    <div class="column">
+                    <div class="column is-desktop">
                         <div class="notification">
                             <p class="column-text">Search by Zip code</p>
                             <input class="input is-primary is-medium is-success is-rounded" type="text" placeholder="Zip code here">
@@ -88,11 +98,11 @@
                     </div>
                     <!-- /.zip -->
 
-                    <!-- .lost pet -->
+                    <!-- .age -->
                     <div class="column">
                         <div class="notification">
                         <p class="column-text">Search by animal age</p>
-                        <div class="select is-danger is-medium is-rounded drop-down">
+                        <div class="select is-success is-medium is-rounded">
                             <select>
                               <option>Age</option>
                               <option>KITTEN/PUPPY</option>
@@ -102,12 +112,26 @@
                           </div>
                         </div>
                     </div>
-                </div>
-                <!-- /.lost pet -->
-                
+                    <!-- /.age -->
+                </div>                
+            </div>
+
+            <div class="submit">
+              <button class="button is-primary is-rounded">Submit</button>
             </div>
         </section>
         <!-- /.section -->
+
+        <div class="what-we-do" id="what-we-do">
+        <section class="section is-medium">
+          <h1 class="title">What we do:</h1>
+          <h2 class="subtitle">
+            Paws-To-Home is a place where we connect people with animals in a central location.  We provide
+            various pieces of information about a cat and/or dog in hopes to provide these animals with a Home
+            where they can be loved and cared for.
+          </h2>
+        </section>
+      </div>
 
 	</body>
 </html>
