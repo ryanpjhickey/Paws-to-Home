@@ -29,13 +29,13 @@ function logAPI() {
     let counter = 0
     petListing.replaceChildren()
     if (petType.value == 'Any animal') {
-        var apiUrl = 'https://api.petfinder.com/v2/animals?distance=500&limit=100&status=adoptable&location=' + zipcode.value.trim()
+        var apiUrl = 'https://api.petfinder.com/v2/animals?distance=500&sort=distance&limit=100&status=adoptable&location=' + zipcode.value.trim()
     }
     else if (petType.value == 'Cats') {
-        var apiUrl = 'https://api.petfinder.com/v2/animals?distance=500&limit=100&status=adoptable&location=' + zipcode.value.trim() + '&type=cat'
+        var apiUrl = 'https://api.petfinder.com/v2/animals?distance=500&sort=distance&limit=100&status=adoptable&location=' + zipcode.value.trim() + '&type=cat'
     }
     else if (petType.value == 'Dogs') {
-        var apiUrl = 'https://api.petfinder.com/v2/animals?distance=500&limit=100&status=adoptable&location=' + zipcode.value.trim() + '&type=dog'
+        var apiUrl = 'https://api.petfinder.com/v2/animals?distance=500&sort=distance&limit=100&status=adoptable&location=' + zipcode.value.trim() + '&type=dog'
     }
     if (petAgeFilter.value == 'Any age') {
         var apiUrlFinal = apiUrl
