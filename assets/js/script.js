@@ -325,13 +325,13 @@ function pageFour() {
     if (petAgeFilter.value == 'Any age') {
         var apiUrlFinal = apiUrl
     }
-    else if (petAgeFilter.value == 'BABY') {
+    else if (petAgeFilter.value == 'Baby') {
         var apiUrlFinal = apiUrl + '&age=baby,young'
     }
-    else if (petAgeFilter.value == 'ADULT') {
+    else if (petAgeFilter.value == 'Adult') {
         var apiUrlFinal = apiUrl + '&age=adult'
     }
-    else if (petAgeFilter.value == 'SENIOR') {
+    else if (petAgeFilter.value == 'Senior') {
         var apiUrlFinal = apiUrl + '&age=senior'
     }
     fetch(apiUrlFinal, {
