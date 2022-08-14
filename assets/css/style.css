@@ -13,21 +13,19 @@
   font-weight: bold;
 }
 
-
 img {
   text-align: center;
   margin: 0 auto;
   padding: 0px;
   height: 400px;
-=======
-.hero-image {
-    
-    text-align:center;
-    margin: 0 auto;
-    padding:0px;
-    height:400px;
-    border-radius: 10px;
+}
 
+.hero-image {
+  text-align: center;
+  margin: 0 auto;
+  padding: 0px;
+  height: 400px;
+  border-radius: 10px;
 }
 
 .navbar-menu {
@@ -36,7 +34,6 @@ img {
 }
 
 .navbar-dropdown {
-
   color: black;
   font-weight: bold;
 }
@@ -71,26 +68,23 @@ main {
   display: none;
   color: red;
 }
-    color:black;
-    font-weight: bold;
-}
 
 .submit {
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
-   padding: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
 }
 
 .what-we-do {
-    display: flex;
-    flex: row;
-    justify-content: center;
+  display: flex;
+  flex: row;
+  justify-content: center;
 }
 
 .title {
-    position: static;
+  position: static;
 }
 
 /* .center {
@@ -108,5 +102,3 @@ main {
     position: relative;
     
 } */
-
-
