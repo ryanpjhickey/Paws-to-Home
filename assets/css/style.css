@@ -17,7 +17,7 @@
   text-align: center;
   margin: 0 auto;
   padding: 0px;
-  height: 400px;
+  height: 128px;
 }
 
 .hero-image {
@@ -60,6 +60,7 @@ main {
 .card h1 {
   font-weight: bold;
   font-size: large;
+  font-family: 'Catamaran', sans-serif;
 }
 
 #invalid {
@@ -81,6 +82,7 @@ main {
   justify-content: center;
   background-color: hsl(204, 86%, 53%);
 }
+
 
 .title {
   position: static;
@@ -117,7 +119,6 @@ main {
     text-shadow: 0px 10px 20px;
     color: white;
     font-size: 70px 4vw;
-
 }
 
 .navbar-item {
@@ -127,11 +128,15 @@ main {
 }
 
 
-
 footer{
     font-family: 'Catamaran', sans-serif;
-    padding: 2rem 1rem 1rem !important;
+    padding: 1rem 1rem 5rem !important;
     color: black;
+}
+
+.nav-foot {
+    color: black;
+}
 
 
 
