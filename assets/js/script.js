@@ -91,7 +91,6 @@ function logAPI() {
                 if (counter < 13) {
                     var petPhoto = data.animals[index].photos[0].full
                     petListing.appendChild(petsec)
-                    peth1.className = 'flexPets-h1'
                     petsec.append(peth1)
                     petsec.className = 'card column is-one-third'
                     peth1.textContent = cardTemplate
