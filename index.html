@@ -11,6 +11,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@300&display=swap" rel="stylesheet">
 
 </style>
 
@@ -60,6 +65,9 @@
                             <a class="navbar-item">
                                 Report an Issue
                             </a>
+                            <a class="navbar-item">
+                              Favroites
+                          </a>
                         </div>
                     </div>                     
                 </div>
@@ -78,11 +86,10 @@
                         <div class="notification">
                         <p class="column-text">Search by type of animal</p>
                         <div class="select is-success is-medium is-rounded">
-                            <select>
-                              <option>Select animal</option>
-                              <option>Cat</option>
-                              <option>Dog</option>
-                              <option>All</option>
+                            <select class="petType">
+                              <option>Any animal</option>
+                              <option>Cats</option>
+                              <option>Dogs</option>
                             </select>
                           </div>
                         </div>
@@ -92,9 +99,10 @@
                     <!-- /zip -->
                     <div class="column is-desktop">
                         <div class="notification">
-                            <p class="column-text">Search by Zip code</p>
-                            <input class="input is-primary is-medium is-success is-rounded" type="text" placeholder="Zip code here">
+                            <p class="column-text" id="zipcode">Search by Zip code</p>
+                            <input id="zip" class="input is-primary is-medium is-success is-rounded" type="text" placeholder="Zip code here">
                         </div>
+                        <p id="invalid">Invalid Zipcode!</p>
                     </div>
                     <!-- /.zip -->
 
@@ -102,12 +110,13 @@
                     <div class="column">
                         <div class="notification">
                         <p class="column-text">Search by animal age</p>
-                        <div class="select is-success is-medium is-rounded">
-                            <select>
-                              <option>Age</option>
-                              <option>KITTEN/PUPPY</option>
-                              <option>ADULT</option>
-                              <option>SENIOR</option>
+
+                        <div class="select is-success is-medium is-rounded drop-down">
+                            <select class="petAgeFilter">
+                              <option>Any age</option>
+                              <option>Baby</option>
+                              <option>Adult</option>
+                              <option>Senior</option>
                             </select>
                           </div>
                         </div>
@@ -117,9 +126,11 @@
             </div>
 
             <div class="submit">
-              <button class="button is-primary is-rounded">Search</button>
+              <button id="searchbtn" class="button is-primary is-rounded">Search</button>
             </div>
         </section>
+        <main id="petListing" class="columns">
+        </main>
         <!-- /.section -->
 
         <div class="what-we-do" id="what-we-do">
@@ -133,5 +144,49 @@
         </section>
       </div>
 
+      <!-- .footer -->
+      <footer class="footer">
+        <div class="content has-text-centered">
+          <!-- .navbar -->
+          <div class="navbar-menu">
+            <div class="navbar-end">
+                <a class="navbar-item" href="#home">
+                    Home
+                </a>
+                <a class="navbar-item" href="#what-we-do">
+                    What We Do
+                </a>
+                <a class="navbar-item" href="#adopt">
+                    Adopt An Animal
+                </a>
+                
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        More
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        
+                        
+                        <a class="navbar-item">
+                            Contact
+                        </a>
+                        <a class="navbar-item">
+                            Report an Issue
+                        </a>
+                    </div>
+                </div>                     
+            </div>
+        </div>
+          <!-- /.navbar -->
+          <p>
+          <p class="center">Paws-T<span><img class="heart" src="./assets/images/paw.png"></span>-Home</p>
+          </p>
+        </div>
+      </footer>
+      <!-- /.footer -->
+
 	</body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js"></script>
 </html>
