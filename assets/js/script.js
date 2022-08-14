@@ -382,6 +382,7 @@ function pageFour() {
                     petsec.append(petdiv)
                     petdiv.append(petimg)
                     petimg.src = petPhoto
+                    petimg.className = 'petimg'
                     petdiv.append(petInfoSpecies)
                     petdiv.append(petInfoAge)
                     petdiv.append(petInfoDist)
