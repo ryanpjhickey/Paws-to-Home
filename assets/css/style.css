@@ -138,6 +138,11 @@ footer{
     color: black;
 }
 
+.foot-img {
+  display: flex;
+  justify-content: center;
+}
+
 
 
 /* .heart {
