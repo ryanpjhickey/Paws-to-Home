@@ -17,7 +17,7 @@
   text-align: center;
   margin: 0 auto;
   padding: 0px;
-  height: 400px;
+  height: 128px;
 }
 
 .hero-image {
@@ -55,13 +55,12 @@ main {
   flex: 1 0 0;
   padding: 10px;
   text-align: center;
-  border-style: solid;
-  border-width: 1px;
 }
 
 .card h1 {
   font-weight: bold;
   font-size: large;
+  font-family: 'Catamaran', sans-serif;
 }
 
 #invalid {
@@ -81,19 +80,70 @@ main {
   display: flex;
   flex: row;
   justify-content: center;
+  background-color: hsl(204, 86%, 53%);
 }
+
 
 .title {
   position: static;
 }
 
-/* .center {
+.colunm {
+    position: fi;
+
+}
+
+
+.select {
+    display: flex;
+    justify-content: center;
+    -webkit-appearance: none;
+}
+
+.select:not(.is-multiple):not(.is-loading)::after {
+    border-color: transparent;
+}
+
+.footer-heart {
+    height: 50%;
+}
+
+.heart {
+    height: 50px;
+
+}
+
+
+.footer{
     font-family: 'DynaPuff', cursive;
     text-shadow: 0px 10px 20px;
     color: white;
     font-size: 70px 4vw;
+}
 
-} */
+.navbar-item {
+    font-family: 'Catamaran', sans-serif;
+    color: white;
+    font-size: 70px 4vw;
+}
+
+
+footer{
+    font-family: 'Catamaran', sans-serif;
+    padding: 1rem 1rem 5rem !important;
+    color: black;
+}
+
+.nav-foot {
+    color: black;
+}
+
+.foot-img {
+  display: flex;
+  justify-content: center;
+}
+
+
 
 /* .heart {
     height: 60px;
