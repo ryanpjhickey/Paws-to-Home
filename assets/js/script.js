@@ -365,6 +365,7 @@ function pageFour() {
             var petInfoDist = document.createElement('p')
             var petInfoContact = document.createElement('p')
             var petsec = document.createElement('section')
+            var petfav = document.createElement('button')
             if (data.animals[index].photos.length === 0) {
                 continue
             } else if (data.animals[index].contact.email === null && data.animals[index].contact.phone === null) {
@@ -387,9 +388,12 @@ function pageFour() {
                     petdiv.append(petInfoDist)
                     petInfoDist.textContent = `${petDistance} miles away from ` + zipcode.value.trim()
                     petdiv.append(petInfoContact)
+                    petdiv.append(petfave)
+                    petfave.className = 'favebtn'
                     petInfoSpecies.textContent = `Species: ${petSpecies}`
                     petInfoAge.textContent = `Age: ${petAge}`
                     petInfoContact.textContent = `Contact: ${petEmail} ${petPhone}`
+                    petfav.textContent = 'Favorite'
                     if (data.animals[index].contact.email === null) {
                         petInfoContact.textContent = `Contact: ${petPhone}`
                     }
@@ -404,6 +408,21 @@ function pageFour() {
         console.warn(error);
     });
 }
+
+function saveFavorite(e) {
+    if (e.target.className !== "favebtn") {
+        return
+    }
+    var textAreaVal = e.target.previousElementSibling.value
+    var lsKey = e.target.previousElementSibling.getAttribute('id')
+    localStorage.setItem(lsKey, JSON.stringify(textAreaVal))
+}
+
+function displayFavorite() {
+    document.querySelector('#favorites').value = JSON.parse(localStorage.getItem)
+}
+
+displayFavorite()
 
 document.querySelector('#searchbtn').addEventListener('click', logAPI)
 document.querySelector('#searchbtn').addEventListener('click', getToken(petFinderURL, userName, passWord))
