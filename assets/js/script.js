@@ -81,6 +81,7 @@ function logAPI() {
             var petInfoDist = document.createElement('p')
             var petInfoContact = document.createElement('p')
             var petsec = document.createElement('section')
+            var petBtn = document.createElement('button')
             if (data.animals[index].photos.length === 0) {
                 continue
             } else if (data.animals[index].contact.email === null && data.animals[index].contact.phone === null) {
@@ -92,7 +93,7 @@ function logAPI() {
                     var petPhoto = data.animals[index].photos[0].full
                     petListing.appendChild(petsec)
                     petsec.append(peth1)
-                    petsec.className = 'card column is-one-third'
+                    petsec.className = 'card column is-one-third saveFave'
                     peth1.textContent = cardTemplate
                     petsec.append(petdiv)
                     petdiv.append(petimg)
@@ -105,6 +106,9 @@ function logAPI() {
                     petInfoSpecies.textContent = `Species: ${petSpecies}`
                     petInfoAge.textContent = `Age: ${petAge}`
                     petInfoContact.textContent = `Contact: ${petEmail} ${petPhone}`
+                    petdiv.append(petBtn)
+                    petBtn.className = 'savePet'
+                    petBtn.textContent = `Save ${petName} to favorites`
                     if (data.animals[index].contact.email === null) {
                         petInfoContact.textContent = `Contact: ${petPhone}`
                     }
@@ -175,6 +179,7 @@ function pageTwo() {
             var petInfoDist = document.createElement('p')
             var petInfoContact = document.createElement('p')
             var petsec = document.createElement('section')
+            var petBtn = document.createElement('button')
             if (data.animals[index].photos.length === 0) {
                 continue
             } else if (data.animals[index].contact.email === null && data.animals[index].contact.phone === null) {
@@ -197,6 +202,8 @@ function pageTwo() {
                     petdiv.append(petInfoDist)
                     petInfoDist.textContent = `${petDistance} miles away from ` + zipcode.value.trim()
                     petdiv.append(petInfoContact)
+                    petdiv.append(petBtn)
+                    petBtn.className = 'savePet'
                     petInfoSpecies.textContent = `Species: ${petSpecies}`
                     petInfoAge.textContent = `Age: ${petAge}`
                     petInfoContact.textContent = `Contact: ${petEmail} ${petPhone}`
@@ -206,6 +213,7 @@ function pageTwo() {
                     else if (data.animals[index].contact.phone === null) {
                         petInfoContact.textContent = `Contact: ${petEmail}`
                     }
+                    petBtn.textContent = `Favorite ${petName}`
                 }
 
             }
@@ -406,8 +414,26 @@ function pageFour() {
     });
 }
 
+function saveFaves(e) {
+    if (e.target.tagName !== "BUTTON") {
+        return
+    }
+    var petSave = document.getElementsByClassName('saveFave')
+    var lsKey = e.target.previousElementSibling.value
+    localStorage.setItem(petSave, JSON.stringify(petSave))
+    console.log(petSave)
+    console.log(lsKey)
+}
+
+function displayFaves() {
+    document.querySelector('#favoritePets').value = JSON.parse(localStorage.getItem(petSave))
+}
+
+displayFaves()
+
 document.querySelector('#searchbtn').addEventListener('click', logAPI)
 document.querySelector('#searchbtn').addEventListener('click', getToken(petFinderURL, userName, passWord))
+document.querySelector('.petContainer').addEventListener('click', saveFaves)
 // document.querySelector('#page1btn').addEventListener('click', logAPI)
 // document.querySelector('#page2btn').addEventListener('click', pageTwo)
 // document.querySelector('#page3btn').addEventListener('click', pageThree)
