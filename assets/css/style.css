@@ -26,6 +26,7 @@
   padding: 0px;
   height: 400px;
   border-radius: 10px;
+  width: 65%;
 }
 
 .navbar-menu {
@@ -135,12 +136,18 @@ footer{
 }
 
 .nav-foot {
+  font-family: 'Catamaran', sans-serif;
     color: black;
+    
 }
 
 .foot-img {
   display: flex;
   justify-content: center;
+}
+
+.nav-back {
+  background-color: hsl(0, 0%, 100%);
 }
 
 
