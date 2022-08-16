@@ -94,6 +94,7 @@ function logAPI() {
                     petListing.appendChild(petsec)
                     petsec.append(peth1)
                     petsec.className = 'card column is-one-third saveFave'
+                    petsec.setAttribute('id', `pet${counter}`)
                     peth1.textContent = cardTemplate
                     petsec.append(petdiv)
                     petdiv.append(petimg)
@@ -108,6 +109,7 @@ function logAPI() {
                     petInfoContact.textContent = `Contact: ${petEmail} ${petPhone}`
                     petdiv.append(petBtn)
                     petBtn.className = 'savePet'
+                    petBtn.setAttribute('id', `petbtn${counter}`)
                     petBtn.textContent = `Save ${petName} to favorites`
                     if (data.animals[index].contact.email === null) {
                         petInfoContact.textContent = `Contact: ${petPhone}`
@@ -418,18 +420,91 @@ function saveFaves(e) {
     if (e.target.tagName !== "BUTTON") {
         return
     }
-    var petSave = document.getElementsByClassName('saveFave')
-    var lsKey = e.target.previousElementSibling.value
-    localStorage.setItem(petSave, JSON.stringify(petSave))
-    console.log(petSave)
-    console.log(lsKey)
+    if (e.target.id === `petbtn1`) {
+        var petSave = document.getElementById(`pet1`).outerHTML
+        var lskey = 'pet1'
+        localStorage.setItem(lskey, petSave)
+        console.log(petSave)
+        console.log(localStorage)
+    }
+    else if (e.target.id === `petbtn2`) {
+        var petSave = document.getElementById(`pet2`).outerHTML
+        var lskey = 'pet2'
+        localStorage.setItem(lskey, petSave)
+        console.log(petSave)
+        console.log(localStorage)
+    }
+    else if (e.target.id === `petbtn3`) {
+        var petSave = document.getElementById(`pet3`).outerHTML
+        var lskey = 'pet3'
+        localStorage.setItem(lskey, petSave)
+        console.log(petSave)
+        console.log(localStorage)
+    }
+    else if (e.target.id === `petbtn4`) {
+        var petSave = document.getElementById(`pet4`).outerHTML
+        var lskey = 'pet4'
+        localStorage.setItem(lskey, petSave)
+        console.log(petSave)
+        console.log(localStorage)
+    }
+    else if (e.target.id === `petbtn5`) {
+        var petSave = document.getElementById(`pet5`).outerHTML
+        var lskey = 'pet5'
+        localStorage.setItem(lskey, petSave)
+        console.log(petSave)
+        console.log(localStorage)
+    }
+    else if (e.target.id === `petbtn6`) {
+        var petSave = document.getElementById(`pet6`).outerHTML
+        var lskey = 'pet6'
+        localStorage.setItem(lskey, petSave)
+        console.log(petSave)
+        console.log(localStorage)
+    }
+    else if (e.target.id === `petbtn7`) {
+        var petSave = document.getElementById(`pet7`).outerHTML
+        var lskey = 'pet7'
+        localStorage.setItem(lskey, petSave)
+        console.log(petSave)
+        console.log(localStorage)
+    }
+    else if (e.target.id === `petbtn8`) {
+        var petSave = document.getElementById(`pet8`).outerHTML
+        var lskey = 'pet8'
+        localStorage.setItem(lskey, petSave)
+        console.log(petSave)
+        console.log(localStorage)
+    }
+    else if (e.target.id === `petbtn9`) {
+        var petSave = document.getElementById(`pet9`).outerHTML
+        var lskey = 'pet9'
+        localStorage.setItem(lskey, petSave)
+        console.log(petSave)
+        console.log(localStorage)
+    }
+    else if (e.target.id === `petbtn10`) {
+        var petSave = document.getElementById(`pet10`).outerHTML
+        var lskey = 'pet10'
+        localStorage.setItem(lskey, petSave)
+        console.log(petSave)
+        console.log(localStorage)
+    }
+    else if (e.target.id === `petbtn11`) {
+        var petSave = document.getElementById(`pet11`).outerHTML
+        var lskey = 'pet11'
+        localStorage.setItem(lskey, petSave)
+        console.log(petSave)
+        console.log(localStorage)
+    }
+    else if (e.target.id === `petbtn12`) {
+        var petSave = document.getElementById(`pet12`).outerHTML
+        var lskey = 'pet12'
+        localStorage.setItem(lskey, petSave)
+        console.log(petSave)
+        console.log(localStorage)
+    }
 }
-
-function displayFaves() {
-    document.querySelector('#favoritePets').value = JSON.parse(localStorage.getItem(petSave))
-}
-
-displayFaves()
 
 document.querySelector('#searchbtn').addEventListener('click', logAPI)
 document.querySelector('#searchbtn').addEventListener('click', getToken(petFinderURL, userName, passWord))
