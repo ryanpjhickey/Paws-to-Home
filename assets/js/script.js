@@ -26,6 +26,20 @@ function getToken(url, clientID, clientSecret) {
     }
 }
 
+function logAPI2() {
+    var apiUrl2 = 'https://cat-fact.herokuapp.com/facts'
+    fetch(apiUrl2
+    ).then(function (response) {
+        if (response.ok) {
+            return response.json();
+        }
+        throw response;
+    }).then(function (data) {
+        index = Math.floor(Math.random() * 5) + 0;
+        document.querySelector('#catFact').textContent = data[index].text
+    })
+}
+
 // Get the token
 
 function logAPI() {
@@ -902,3 +916,4 @@ document.querySelector('#searchbtn').addEventListener('click', logAPI)
 document.querySelector('#searchbtn').addEventListener('click', createPages)
 document.querySelector('#searchbtn').addEventListener('click', getToken(petFinderURL, userName, passWord))
 document.querySelector('.petContainer').addEventListener('click', saveFaves)
+logAPI2()
