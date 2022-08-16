@@ -1,10 +1,11 @@
+
 .center {
   font-weight: bold;
   font-size: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: black;
+  color: hsl(204, 86%, 53%);
 }
 
 .column-text {
@@ -26,6 +27,7 @@
   padding: 0px;
   height: 400px;
   border-radius: 10px;
+  width: 65%;
 }
 
 .navbar-menu {
@@ -49,6 +51,17 @@ main {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 60px;
+}
+
+.midsec {
+  background-image: url("/adopt-a-pet/assets/images/dogjump.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+.column-text {
+  color: white;
 }
 
 .card {
@@ -128,27 +141,50 @@ main {
 }
 
 
-footer{
+footer {
     font-family: 'Catamaran', sans-serif;
     padding: 1rem 1rem 5rem !important;
     color: black;
 }
 
 .nav-foot {
+  font-family: 'Catamaran', sans-serif;
     color: black;
+    
 }
+
 
 .foot-img {
   display: flex;
   justify-content: center;
 }
 
+.nav-back {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.center {
+  font-family: 'DynaPuff', cursive;
+  color: ;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+#pages {
+  display: flex;
+  justify-content: center;
+}
+
+#page1btn {
+  margin-right: 5px;
+}
+
+#page2btn {
+  margin-right: 5px;
+}
+
+#page3btn {
+  margin-right: 5px;
+}
 
 
-/* .heart {
-    height: 60px;
-    border: none;
-    padding: 2px;
-    position: relative;
-    
-} */
