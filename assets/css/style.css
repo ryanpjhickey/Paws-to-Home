@@ -129,7 +129,7 @@ main {
 }
 
 
-footer{
+footer {
     font-family: 'Catamaran', sans-serif;
     padding: 1rem 1rem 5rem !important;
     color: black;
@@ -151,11 +151,3 @@ footer{
 }
 
 
-
-/* .heart {
-    height: 60px;
-    border: none;
-    padding: 2px;
-    position: relative;
-    
-} */
