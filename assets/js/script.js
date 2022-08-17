@@ -555,342 +555,351 @@ function saveFaves(e) {
     if (e.target.tagName !== "BUTTON") {
         return
     }
-    if (e.target.id === `petbtn1`) {
-        var petSave = document.getElementById(`pet1`).outerHTML
-        var lskey = 'pet1'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
+    for (let petListI = 0; petListI < 48; petListI++) {
+        if (e.target.id === `petbtn${petListI + 1}`) {
+            var petSave = document.getElementById(`pet${petListI + 1}`).outerHTML
+            var lskey = `pet${petListI + 1}`
+            localStorage.setItem(lskey, petSave)
+            console.log(petSave)
+            console.log(localStorage)
+        }
     }
-    else if (e.target.id === `petbtn2`) {
-        var petSave = document.getElementById(`pet2`).outerHTML
-        var lskey = 'pet2'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn3`) {
-        var petSave = document.getElementById(`pet3`).outerHTML
-        var lskey = 'pet3'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn4`) {
-        var petSave = document.getElementById(`pet4`).outerHTML
-        var lskey = 'pet4'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn5`) {
-        var petSave = document.getElementById(`pet5`).outerHTML
-        var lskey = 'pet5'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn6`) {
-        var petSave = document.getElementById(`pet6`).outerHTML
-        var lskey = 'pet6'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn7`) {
-        var petSave = document.getElementById(`pet7`).outerHTML
-        var lskey = 'pet7'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn8`) {
-        var petSave = document.getElementById(`pet8`).outerHTML
-        var lskey = 'pet8'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn9`) {
-        var petSave = document.getElementById(`pet9`).outerHTML
-        var lskey = 'pet9'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn10`) {
-        var petSave = document.getElementById(`pet10`).outerHTML
-        var lskey = 'pet10'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn11`) {
-        var petSave = document.getElementById(`pet11`).outerHTML
-        var lskey = 'pet11'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn12`) {
-        var petSave = document.getElementById(`pet12`).outerHTML
-        var lskey = 'pet12'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn13`) {
-        var petSave = document.getElementById(`pet13`).outerHTML
-        var lskey = 'pet13'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn14`) {
-        var petSave = document.getElementById(`pet14`).outerHTML
-        var lskey = 'pet14'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn15`) {
-        var petSave = document.getElementById(`pet15`).outerHTML
-        var lskey = 'pet15'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn16`) {
-        var petSave = document.getElementById(`pet16`).outerHTML
-        var lskey = 'pet16'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn17`) {
-        var petSave = document.getElementById(`pet17`).outerHTML
-        var lskey = 'pet17'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn18`) {
-        var petSave = document.getElementById(`pet18`).outerHTML
-        var lskey = 'pet18'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn19`) {
-        var petSave = document.getElementById(`pet19`).outerHTML
-        var lskey = 'pet19'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn20`) {
-        var petSave = document.getElementById(`pet20`).outerHTML
-        var lskey = 'pet20'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn21`) {
-        var petSave = document.getElementById(`pet21`).outerHTML
-        var lskey = 'pet21'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn22`) {
-        var petSave = document.getElementById(`pet22`).outerHTML
-        var lskey = 'pet22'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn23`) {
-        var petSave = document.getElementById(`pet23`).outerHTML
-        var lskey = 'pet23'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn24`) {
-        var petSave = document.getElementById(`pet24`).outerHTML
-        var lskey = 'pet24'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn25`) {
-        var petSave = document.getElementById(`pet25`).outerHTML
-        var lskey = 'pet25'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn26`) {
-        var petSave = document.getElementById(`pet26`).outerHTML
-        var lskey = 'pet26'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn27`) {
-        var petSave = document.getElementById(`pet27`).outerHTML
-        var lskey = 'pet27'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn28`) {
-        var petSave = document.getElementById(`pet28`).outerHTML
-        var lskey = 'pet28'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn29`) {
-        var petSave = document.getElementById(`pet29`).outerHTML
-        var lskey = 'pet29'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn30`) {
-        var petSave = document.getElementById(`pet30`).outerHTML
-        var lskey = 'pet30'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn31`) {
-        var petSave = document.getElementById(`pet31`).outerHTML
-        var lskey = 'pet31'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn32`) {
-        var petSave = document.getElementById(`pet32`).outerHTML
-        var lskey = 'pet32'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn33`) {
-        var petSave = document.getElementById(`pet33`).outerHTML
-        var lskey = 'pet33'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn34`) {
-        var petSave = document.getElementById(`pet34`).outerHTML
-        var lskey = 'pet34'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn35`) {
-        var petSave = document.getElementById(`pet35`).outerHTML
-        var lskey = 'pet35'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn36`) {
-        var petSave = document.getElementById(`pet36`).outerHTML
-        var lskey = 'pet36'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn37`) {
-        var petSave = document.getElementById(`pet37`).outerHTML
-        var lskey = 'pet37'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn38`) {
-        var petSave = document.getElementById(`pet38`).outerHTML
-        var lskey = 'pet38'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn39`) {
-        var petSave = document.getElementById(`pet39`).outerHTML
-        var lskey = 'pet39'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn40`) {
-        var petSave = document.getElementById(`pet40`).outerHTML
-        var lskey = 'pet40'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn41`) {
-        var petSave = document.getElementById(`pet41`).outerHTML
-        var lskey = 'pet41'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn42`) {
-        var petSave = document.getElementById(`pet42`).outerHTML
-        var lskey = 'pet42'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn43`) {
-        var petSave = document.getElementById(`pet43`).outerHTML
-        var lskey = 'pet43'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn44`) {
-        var petSave = document.getElementById(`pet44`).outerHTML
-        var lskey = 'pet44'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn45`) {
-        var petSave = document.getElementById(`pet45`).outerHTML
-        var lskey = 'pet45'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn46`) {
-        var petSave = document.getElementById(`pet46`).outerHTML
-        var lskey = 'pet46'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn47`) {
-        var petSave = document.getElementById(`pet47`).outerHTML
-        var lskey = 'pet47'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
-    else if (e.target.id === `petbtn48`) {
-        var petSave = document.getElementById(`pet48`).outerHTML
-        var lskey = 'pet48'
-        localStorage.setItem(lskey, petSave)
-        console.log(petSave)
-        console.log(localStorage)
-    }
+    // if (e.target.id === `petbtn1`) {
+    //     var petSave = document.getElementById(`pet1`).outerHTML
+    //     var lskey = 'pet1'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn2`) {
+    //     var petSave = document.getElementById(`pet2`).outerHTML
+    //     var lskey = 'pet2'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn3`) {
+    //     var petSave = document.getElementById(`pet3`).outerHTML
+    //     var lskey = 'pet3'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn4`) {
+    //     var petSave = document.getElementById(`pet4`).outerHTML
+    //     var lskey = 'pet4'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn5`) {
+    //     var petSave = document.getElementById(`pet5`).outerHTML
+    //     var lskey = 'pet5'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn6`) {
+    //     var petSave = document.getElementById(`pet6`).outerHTML
+    //     var lskey = 'pet6'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn7`) {
+    //     var petSave = document.getElementById(`pet7`).outerHTML
+    //     var lskey = 'pet7'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn8`) {
+    //     var petSave = document.getElementById(`pet8`).outerHTML
+    //     var lskey = 'pet8'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn9`) {
+    //     var petSave = document.getElementById(`pet9`).outerHTML
+    //     var lskey = 'pet9'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn10`) {
+    //     var petSave = document.getElementById(`pet10`).outerHTML
+    //     var lskey = 'pet10'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn11`) {
+    //     var petSave = document.getElementById(`pet11`).outerHTML
+    //     var lskey = 'pet11'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn12`) {
+    //     var petSave = document.getElementById(`pet12`).outerHTML
+    //     var lskey = 'pet12'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn13`) {
+    //     var petSave = document.getElementById(`pet13`).outerHTML
+    //     var lskey = 'pet13'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn14`) {
+    //     var petSave = document.getElementById(`pet14`).outerHTML
+    //     var lskey = 'pet14'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn15`) {
+    //     var petSave = document.getElementById(`pet15`).outerHTML
+    //     var lskey = 'pet15'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn16`) {
+    //     var petSave = document.getElementById(`pet16`).outerHTML
+    //     var lskey = 'pet16'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn17`) {
+    //     var petSave = document.getElementById(`pet17`).outerHTML
+    //     var lskey = 'pet17'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn18`) {
+    //     var petSave = document.getElementById(`pet18`).outerHTML
+    //     var lskey = 'pet18'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn19`) {
+    //     var petSave = document.getElementById(`pet19`).outerHTML
+    //     var lskey = 'pet19'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn20`) {
+    //     var petSave = document.getElementById(`pet20`).outerHTML
+    //     var lskey = 'pet20'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn21`) {
+    //     var petSave = document.getElementById(`pet21`).outerHTML
+    //     var lskey = 'pet21'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn22`) {
+    //     var petSave = document.getElementById(`pet22`).outerHTML
+    //     var lskey = 'pet22'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn23`) {
+    //     var petSave = document.getElementById(`pet23`).outerHTML
+    //     var lskey = 'pet23'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn24`) {
+    //     var petSave = document.getElementById(`pet24`).outerHTML
+    //     var lskey = 'pet24'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn25`) {
+    //     var petSave = document.getElementById(`pet25`).outerHTML
+    //     var lskey = 'pet25'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn26`) {
+    //     var petSave = document.getElementById(`pet26`).outerHTML
+    //     var lskey = 'pet26'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn27`) {
+    //     var petSave = document.getElementById(`pet27`).outerHTML
+    //     var lskey = 'pet27'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn28`) {
+    //     var petSave = document.getElementById(`pet28`).outerHTML
+    //     var lskey = 'pet28'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn29`) {
+    //     var petSave = document.getElementById(`pet29`).outerHTML
+    //     var lskey = 'pet29'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn30`) {
+    //     var petSave = document.getElementById(`pet30`).outerHTML
+    //     var lskey = 'pet30'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn31`) {
+    //     var petSave = document.getElementById(`pet31`).outerHTML
+    //     var lskey = 'pet31'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn32`) {
+    //     var petSave = document.getElementById(`pet32`).outerHTML
+    //     var lskey = 'pet32'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn33`) {
+    //     var petSave = document.getElementById(`pet33`).outerHTML
+    //     var lskey = 'pet33'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn34`) {
+    //     var petSave = document.getElementById(`pet34`).outerHTML
+    //     var lskey = 'pet34'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn35`) {
+    //     var petSave = document.getElementById(`pet35`).outerHTML
+    //     var lskey = 'pet35'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn36`) {
+    //     var petSave = document.getElementById(`pet36`).outerHTML
+    //     var lskey = 'pet36'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn37`) {
+    //     var petSave = document.getElementById(`pet37`).outerHTML
+    //     var lskey = 'pet37'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn38`) {
+    //     var petSave = document.getElementById(`pet38`).outerHTML
+    //     var lskey = 'pet38'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn39`) {
+    //     var petSave = document.getElementById(`pet39`).outerHTML
+    //     var lskey = 'pet39'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn40`) {
+    //     var petSave = document.getElementById(`pet40`).outerHTML
+    //     var lskey = 'pet40'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn41`) {
+    //     var petSave = document.getElementById(`pet41`).outerHTML
+    //     var lskey = 'pet41'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn42`) {
+    //     var petSave = document.getElementById(`pet42`).outerHTML
+    //     var lskey = 'pet42'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn43`) {
+    //     var petSave = document.getElementById(`pet43`).outerHTML
+    //     var lskey = 'pet43'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn44`) {
+    //     var petSave = document.getElementById(`pet44`).outerHTML
+    //     var lskey = 'pet44'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn45`) {
+    //     var petSave = document.getElementById(`pet45`).outerHTML
+    //     var lskey = 'pet45'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn46`) {
+    //     var petSave = document.getElementById(`pet46`).outerHTML
+    //     var lskey = 'pet46'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn47`) {
+    //     var petSave = document.getElementById(`pet47`).outerHTML
+    //     var lskey = 'pet47'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
+    // else if (e.target.id === `petbtn48`) {
+    //     var petSave = document.getElementById(`pet48`).outerHTML
+    //     var lskey = 'pet48'
+    //     localStorage.setItem(lskey, petSave)
+    //     console.log(petSave)
+    //     console.log(localStorage)
+    // }
 }
 
 function createPages() {
