@@ -20,13 +20,8 @@ Paws-To-Home is a webpage that helps to connect people with cats and/or dogs the
 
 ## Technologies
 
-![HTML logo](./assets/images/html.png)
--logo test
-
-- CSS
-- JavaScript
-- Bulma
-- APIs ()
+![HTML_logo](./assets/images/html.png)
+![css_logo](./assets/images/css3.png)
 
 ## Website
 
