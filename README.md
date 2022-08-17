@@ -3,12 +3,13 @@
 ## Table of Contents
 
 - [Description](#Description)
-- [Links](#Links)
 - [Technologies](#Technologies)
+- [Links](#Links)
 - [Screenshots](#Screenshots)
 - [User Instructions](#User-Instructions)
 - [Contributors](#Contributors)
 - [Acknowledgements](#Acknowledgements)
+- [Quesitons](#Questions)
 
 #
 
@@ -45,4 +46,16 @@ http://ryanpjhickey.github.io/Paws-to-Home
 
 ![image](./assets/images/p2h.png)
 
-## Reflection
+#
+
+## User-Instructions
+
+A user can simply choose to search for a cat, dog, or both, type in a zip code along with an age and will be provided with search results below their query selections. Are are additional page numbers at the bottom of the search results that allow to switch between the multiple pages of results. Users can also save an animal to their favorites which will be shown under the favorites link for later viewing.
+
+#
+
+## Contributors
+
+[<img src="https://ca.slack-edge.com/T03EP850QMA-U03MKQ6HKB3-2c9d97da4786-512" width="75" height="75">](https://github.com/ryanpjhickey)
+[<img src="https://ca.slack-edge.com/T03EP850QMA-U03MKSQRW6P-3ef746271a44-512" width="75" height="75">](https://github.com/KevinHall4255)
+[<img src="https://ca.slack-edge.com/T03EP850QMA-U03LRRGR9SA-26e6f5444e8e-512" width="75" height="75">](https://github.com/jonathonb1)
