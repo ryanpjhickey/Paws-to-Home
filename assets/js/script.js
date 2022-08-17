@@ -44,10 +44,10 @@ function logAPI2() {
         throw response;
     }).then(function (data) {
         index = Math.floor(Math.random() * 5) + 0;
-        if (index = 2) {
-            index++;
+        if (index == 2) {
+            index = 3;
             console.log(index)
-        }
+        } else
         document.querySelector('#catFact').textContent = data[index].text
     }).catch(function (error) {
         console.warn(error);
