@@ -173,3 +173,7 @@ footer {
 #page3btn {
   margin-right: 5px;
 }
+
+div.select.is-success.is-medium.is-rounded::after {
+  display: none;
+}
