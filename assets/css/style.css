@@ -54,7 +54,7 @@ main {
 }
 
 .midsec {
-  background-image: url("/adopt-a-pet/assets/images/dogjump.png");
+  background-image: url("./assets/images/dogjump.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
