@@ -175,5 +175,5 @@ footer {
 }
 
 div.select.is-success.is-medium.is-rounded::after {
-  display: none;
+  margin-right: 105px;
 }
