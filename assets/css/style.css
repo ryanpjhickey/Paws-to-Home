@@ -1,4 +1,3 @@
-
 .center {
   font-weight: bold;
   font-size: 50px;
@@ -54,7 +53,7 @@ main {
 }
 
 .midsec {
-  background-image: url("./assets/images/dogjump.png");
+  background-image: url("/assets/images/dogjump.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -73,7 +72,7 @@ main {
 .card h1 {
   font-weight: bold;
   font-size: large;
-  font-family: 'Catamaran', sans-serif;
+  font-family: "Catamaran", sans-serif;
 }
 
 #invalid {
@@ -96,57 +95,51 @@ main {
   background-color: hsl(204, 86%, 53%);
 }
 
-
 .title {
   position: static;
 }
 
 .select {
-    display: flex;
-    justify-content: center;
-    -webkit-appearance: none;
+  display: flex;
+  justify-content: center;
+  -webkit-appearance: none;
 }
 
 .select:not(.is-multiple):not(.is-loading)::after {
-    border-color: transparent;
+  border-color: transparent;
 }
 
 .footer-heart {
-    height: 50%;
+  height: 50%;
 }
 
 .heart {
-    height: 50px;
-
+  height: 50px;
 }
 
-
-.footer{
-    font-family: 'DynaPuff', cursive;
-    text-shadow: 0px 10px 20px;
-    color: white;
-    font-size: 70px 4vw;
+.footer {
+  font-family: "DynaPuff", cursive;
+  text-shadow: 0px 10px 20px;
+  color: white;
+  font-size: 70px 4vw;
 }
 
 .navbar-item {
-    font-family: 'Catamaran', sans-serif;
-    color: white;
-    font-size: 70px 4vw;
+  font-family: "Catamaran", sans-serif;
+  color: white;
+  font-size: 70px 4vw;
 }
 
-
 footer {
-    font-family: 'Catamaran', sans-serif;
-    padding: 1rem 1rem 5rem !important;
-    color: black;
+  font-family: "Catamaran", sans-serif;
+  padding: 1rem 1rem 5rem !important;
+  color: black;
 }
 
 .nav-foot {
-  font-family: 'Catamaran', sans-serif;
-    color: black;
-    
+  font-family: "Catamaran", sans-serif;
+  color: black;
 }
-
 
 .foot-img {
   display: flex;
@@ -158,7 +151,7 @@ footer {
 }
 
 .center {
-  font-family: 'DynaPuff', cursive;
+  font-family: "DynaPuff", cursive;
   color: hsl(204, 86%, 53%);
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
@@ -180,5 +173,3 @@ footer {
 #page3btn {
   margin-right: 5px;
 }
-
-
