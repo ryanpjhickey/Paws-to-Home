@@ -47,7 +47,7 @@ function logAPI2() {
         if (index == 2) {
             index = 3;
             console.log(index)
-        } else
+        }
         document.querySelector('#catFact').textContent = data[index].text
     }).catch(function (error) {
         console.warn(error);
