@@ -1,7 +1,7 @@
-var token_ // variable will store the token
-var userName = "oVZ5FdhYCgBs9YDLsTt3ue4B1vfLHZZE68Knl3asVI8Je1u49J"; // app clientID
-var passWord = "q41oLHMowHzg43asWLf72FJgRTMleScmdXAXeiiD"; // app clientSecret
-var petFinderURL = "https://api.petfinder.com/v2/oauth2/token"; // Your application token endpoint  
+var token_
+var userName = "oVZ5FdhYCgBs9YDLsTt3ue4B1vfLHZZE68Knl3asVI8Je1u49J";
+var passWord = "q41oLHMowHzg43asWLf72FJgRTMleScmdXAXeiiD";
+var petFinderURL = "https://api.petfinder.com/v2/oauth2/token";
 var request = new XMLHttpRequest();
 var petListing = document.querySelector('#petListing')
 var zipcode = document.querySelector('#zip')
@@ -9,38 +9,46 @@ var petType = document.querySelector('.petType')
 var petAgeFilter = document.querySelector('.petAgeFilter')
 var counter = 0
 var manyPages = document.querySelector('#pages')
-var counter2 = 0
 
 function getToken(url, clientID, clientSecret) {
     var key;
     request.open("POST", url, true);
     request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    request.send("grant_type=client_credentials&client_id=" + clientID + "&" + "client_secret=" + clientSecret); // specify the credentials to receive the token on request
+    request.send("grant_type=client_credentials&client_id=" + clientID + "&" + "client_secret=" + clientSecret);
     request.onreadystatechange = function () {
         if (request.readyState == request.DONE) {
             var response = request.responseText;
             var obj = JSON.parse(response);
-            key = obj.access_token; //store the value of the accesstoken
-            token_ = key; // store token in your global variable "token_" or you could simply return the value of the access token from the function
+            key = obj.access_token;
+            token_ = key;
         }
     }
 }
 
+var catData = ['While us humans have 206 bones, cats on average have 244.', 'A house cat is genetically 95.6% tiger.', 'Cats can run around 48 kph (30 mph), but only over short distances.', 'Cats can jump 5 times their height.', 'Adult cats have 30 teeth, while kittens have 26.'
+]
+
+indexCatFacts = Math.floor(Math.random() * 5) + 0;
+document.querySelector('#catFact').textContent = catData[indexCatFacts]
+
 function logAPI2() {
-    var apiUrl2 = 'https://cat-fact.herokuapp.com/facts'
+    var apiUrl2 = 'https://cat-fact.herokuapp.com/facts';
     fetch(apiUrl2
     ).then(function (response) {
         if (response.ok) {
             return response.json();
+        } else {
+            indexCatFacts = Math.floor(Math.random() * 5) + 0;
+            document.querySelector('#catFact').textContent = catData[indexCatFacts]
         }
         throw response;
     }).then(function (data) {
         index = Math.floor(Math.random() * 5) + 0;
         document.querySelector('#catFact').textContent = data[index].text
-    })
+    }).catch(function (error) {
+        console.warn(error);
+    });
 }
-
-// Get the token
 
 function logAPI() {
     let counter = 0
@@ -913,4 +921,5 @@ document.querySelector('#searchbtn').addEventListener('click', logAPI)
 document.querySelector('#searchbtn').addEventListener('click', createPages)
 document.querySelector('#searchbtn').addEventListener('click', getToken(petFinderURL, userName, passWord))
 document.querySelector('.petContainer').addEventListener('click', saveFaves)
-logAPI2()
+logAPI2
+
