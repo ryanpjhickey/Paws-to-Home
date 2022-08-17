@@ -53,7 +53,7 @@ main {
 }
 
 .midsec {
-  background-image: url("/assets/images/dogjump.png");
+  background-image: url("../images/dogjump.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
