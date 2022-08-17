@@ -45,7 +45,13 @@ function logAPI2() {
     }).then(function (data) {
         index = Math.floor(Math.random() * 5) + 0;
         document.querySelector('#catFact').textContent = data[index].text
-        console.log(data[index])
+        console.log(data[0])
+        console.log(data[1])
+        console.log(data[2])
+        console.log(data[3])
+        console.log(data[4])
+        console.log(data[5])
+        console.log(data[6])
     }).catch(function (error) {
         console.warn(error);
     });
