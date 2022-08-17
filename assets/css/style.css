@@ -5,7 +5,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+<<<<<<< HEAD
+  color: black;
+=======
   color: hsl(204, 86%, 53%);
+>>>>>>> f21b5088970fe2ab54b4b63e676de9ad2b451249
 }
 
 .column-text {
@@ -27,7 +31,10 @@
   padding: 0px;
   height: 400px;
   border-radius: 10px;
+<<<<<<< HEAD
+=======
   width: 65%;
+>>>>>>> f21b5088970fe2ab54b4b63e676de9ad2b451249
 }
 
 .navbar-menu {
@@ -53,6 +60,8 @@ main {
   padding: 60px;
 }
 
+<<<<<<< HEAD
+=======
 .midsec {
   background-image: url("/adopt-a-pet/assets/images/dogjump.png");
   background-repeat: no-repeat;
@@ -64,6 +73,7 @@ main {
   color: white;
 }
 
+>>>>>>> f21b5088970fe2ab54b4b63e676de9ad2b451249
 .card {
   flex: 1 0 0;
   padding: 10px;
@@ -87,6 +97,7 @@ main {
   justify-content: center;
   align-items: center;
   padding: 15px;
+<<<<<<< HEAD
 }
 
 .what-we-do {
@@ -101,6 +112,22 @@ main {
   position: static;
 }
 
+=======
+}
+
+.what-we-do {
+  display: flex;
+  flex: row;
+  justify-content: center;
+  background-color: hsl(204, 86%, 53%);
+}
+
+
+.title {
+  position: static;
+}
+
+>>>>>>> f21b5088970fe2ab54b4b63e676de9ad2b451249
 .colunm {
     position: fi;
 
@@ -141,13 +168,31 @@ main {
 }
 
 
+<<<<<<< HEAD
+footer{
+=======
 footer {
+>>>>>>> f21b5088970fe2ab54b4b63e676de9ad2b451249
     font-family: 'Catamaran', sans-serif;
     padding: 1rem 1rem 5rem !important;
     color: black;
 }
 
 .nav-foot {
+<<<<<<< HEAD
+    color: black;
+}
+
+
+
+/* .heart {
+    height: 60px;
+    border: none;
+    padding: 2px;
+    position: relative;
+    
+} */
+=======
   font-family: 'Catamaran', sans-serif;
     color: black;
     
@@ -188,3 +233,4 @@ footer {
 }
 
 
+>>>>>>> f21b5088970fe2ab54b4b63e676de9ad2b451249
