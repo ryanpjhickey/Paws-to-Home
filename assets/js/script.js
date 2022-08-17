@@ -906,10 +906,10 @@ function createPages() {
     page2btn.setAttribute('id', 'page2btn')
     page3btn.setAttribute('id', 'page3btn')
     page4btn.setAttribute('id', 'page4btn')
-    page1btn.textContent = '1'
-    page2btn.textContent = '2'
-    page3btn.textContent = '3'
-    page4btn.textContent = '4'
+    page1btn.textContent = 'Page 1'
+    page2btn.textContent = 'Page 2'
+    page3btn.textContent = 'Page 3'
+    page4btn.textContent = 'Page 4'
     document.querySelector('#page1btn').addEventListener('click', pageOne)
     document.querySelector('#page2btn').addEventListener('click', pageTwo)
     document.querySelector('#page3btn').addEventListener('click', pageThree)
