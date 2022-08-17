@@ -25,18 +25,29 @@ function getToken(url, clientID, clientSecret) {
     }
 }
 
+var catData = ['While us humans have 206 bones, cats on average have 244.', 'A house cat is genetically 95.6% tiger.', 'Cats can run around 48 kph (30 mph), but only over short distances.', 'Cats can jump 5 times their height.', 'Adult cats have 30 teeth, while kittens have 26.'
+]
+
+indexCatFacts = Math.floor(Math.random() * 5) + 0;
+document.querySelector('#catFact').textContent = catData[indexCatFacts]
+
 function logAPI2() {
-    var apiUrl2 = 'https://cat-fact.herokuapp.com/facts'
+    var apiUrl2 = 'https://cat-fact.herokuapp.com/facts';
     fetch(apiUrl2
     ).then(function (response) {
         if (response.ok) {
             return response.json();
+        } else {
+            indexCatFacts = Math.floor(Math.random() * 5) + 0;
+            document.querySelector('#catFact').textContent = catData[indexCatFacts]
         }
         throw response;
     }).then(function (data) {
         index = Math.floor(Math.random() * 5) + 0;
         document.querySelector('#catFact').textContent = data[index].text
-    })
+    }).catch(function (error) {
+        console.warn(error);
+    });
 }
 
 function logAPI() {
@@ -913,4 +924,5 @@ document.querySelector('#searchbtn').addEventListener('click', logAPI)
 document.querySelector('#searchbtn').addEventListener('click', createPages)
 document.querySelector('#searchbtn').addEventListener('click', getToken(petFinderURL, userName, passWord))
 document.querySelector('.petContainer').addEventListener('click', saveFaves)
-logAPI2()
+logAPI2
+
