@@ -61,9 +61,3 @@ showFavoriteListings()
 //     document.querySelector('.displayPet46').outerHTML = localStorage.getItem('pet46')
 //     document.querySelector('.displayPet47').outerHTML = localStorage.getItem('pet47')
 //     document.querySelector('.displayPet48').outerHTML = localStorage.getItem('pet48')
-
-// }
-
-
-
-// saveFaves()

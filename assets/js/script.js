@@ -254,7 +254,6 @@ function pageOne() {
 function pageTwo() {
     let counter = 0
     petListing.replaceChildren()
-
     if (petType.value == 'Any animal') {
         var apiUrl = 'https://api.petfinder.com/v2/animals?distance=500&sort=distance&limit=100&status=adoptable&location=' + zipcode.value.trim()
     }
@@ -355,7 +354,6 @@ function pageTwo() {
 function pageThree() {
     let counter = 0
     petListing.replaceChildren()
-
     if (petType.value == 'Any animal') {
         var apiUrl = 'https://api.petfinder.com/v2/animals?distance=500&sort=distance&limit=100&status=adoptable&location=' + zipcode.value.trim()
     }
@@ -456,7 +454,6 @@ function pageThree() {
 function pageFour() {
     let counter = 0
     petListing.replaceChildren()
-
     if (petType.value == 'Any animal') {
         var apiUrl = 'https://api.petfinder.com/v2/animals?distance=500&sort=distance&limit=100&status=adoptable&location=' + zipcode.value.trim()
     }

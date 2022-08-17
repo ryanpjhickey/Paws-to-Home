@@ -165,7 +165,7 @@ footer {
 
 .center {
   font-family: 'DynaPuff', cursive;
-  color: ;
+  color: hsl(204, 86%, 53%);
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
 }
