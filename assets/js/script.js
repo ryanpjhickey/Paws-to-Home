@@ -8,11 +8,8 @@ var zipcode = document.querySelector('#zip')
 var petType = document.querySelector('.petType')
 var petAgeFilter = document.querySelector('.petAgeFilter')
 var counter = 0
-<<<<<<< HEAD
-=======
 var manyPages = document.querySelector('#pages')
 var counter2 = 0
->>>>>>> f21b5088970fe2ab54b4b63e676de9ad2b451249
 
 function getToken(url, clientID, clientSecret) {
     var key;
@@ -29,8 +26,6 @@ function getToken(url, clientID, clientSecret) {
     }
 }
 
-<<<<<<< HEAD
-=======
 function logAPI2() {
     var apiUrl2 = 'https://cat-fact.herokuapp.com/facts'
     fetch(apiUrl2
@@ -45,7 +40,6 @@ function logAPI2() {
     })
 }
 
->>>>>>> f21b5088970fe2ab54b4b63e676de9ad2b451249
 // Get the token
 
 function logAPI() {
@@ -63,15 +57,6 @@ function logAPI() {
     if (petAgeFilter.value == 'Any age') {
         var apiUrlFinal = apiUrl
     }
-<<<<<<< HEAD
-    else if (petAgeFilter.value == 'BABY') {
-        var apiUrlFinal = apiUrl + '&age=baby,young'
-    }
-    else if (petAgeFilter.value == 'ADULT') {
-        var apiUrlFinal = apiUrl + '&age=adult'
-    }
-    else if (petAgeFilter.value == 'SENIOR') {
-=======
     else if (petAgeFilter.value == 'Baby') {
         var apiUrlFinal = apiUrl + '&age=baby,young'
     }
@@ -79,7 +64,6 @@ function logAPI() {
         var apiUrlFinal = apiUrl + '&age=adult'
     }
     else if (petAgeFilter.value == 'Senior') {
->>>>>>> f21b5088970fe2ab54b4b63e676de9ad2b451249
         var apiUrlFinal = apiUrl + '&age=senior'
     }
     fetch(apiUrlFinal, {
@@ -113,10 +97,7 @@ function logAPI() {
             var petInfoDist = document.createElement('p')
             var petInfoContact = document.createElement('p')
             var petsec = document.createElement('section')
-<<<<<<< HEAD
-=======
             var petBtn = document.createElement('button')
->>>>>>> f21b5088970fe2ab54b4b63e676de9ad2b451249
             if (data.animals[index].photos.length === 0) {
                 continue
             } else if (data.animals[index].contact.email === null && data.animals[index].contact.phone === null) {
@@ -128,12 +109,8 @@ function logAPI() {
                     var petPhoto = data.animals[index].photos[0].full
                     petListing.appendChild(petsec)
                     petsec.append(peth1)
-<<<<<<< HEAD
-                    petsec.className = 'card column is-one-third'
-=======
                     petsec.className = 'card column is-one-third saveFave'
                     petsec.setAttribute('id', `pet${counter}`)
->>>>>>> f21b5088970fe2ab54b4b63e676de9ad2b451249
                     peth1.textContent = cardTemplate
                     petsec.append(petdiv)
                     petdiv.append(petimg)
@@ -146,8 +123,6 @@ function logAPI() {
                     petInfoSpecies.textContent = `Species: ${petSpecies}`
                     petInfoAge.textContent = `Age: ${petAge}`
                     petInfoContact.textContent = `Contact: ${petEmail} ${petPhone}`
-<<<<<<< HEAD
-=======
                     petdiv.append(petBtn)
                     petBtn.className = 'savePet'
                     petBtn.setAttribute('id', `petbtn${counter}`)
@@ -253,7 +228,6 @@ function pageOne() {
                     petBtn.className = 'savePet'
                     petBtn.setAttribute('id', `petbtn${counter}`)
                     petBtn.textContent = `Save ${petName} to favorites`
->>>>>>> f21b5088970fe2ab54b4b63e676de9ad2b451249
                     if (data.animals[index].contact.email === null) {
                         petInfoContact.textContent = `Contact: ${petPhone}`
                     }
@@ -272,10 +246,6 @@ function pageOne() {
 function pageTwo() {
     let counter = 0
     petListing.replaceChildren()
-<<<<<<< HEAD
-=======
-
->>>>>>> f21b5088970fe2ab54b4b63e676de9ad2b451249
     if (petType.value == 'Any animal') {
         var apiUrl = 'https://api.petfinder.com/v2/animals?distance=500&sort=distance&limit=100&status=adoptable&location=' + zipcode.value.trim()
     }
@@ -288,15 +258,6 @@ function pageTwo() {
     if (petAgeFilter.value == 'Any age') {
         var apiUrlFinal = apiUrl
     }
-<<<<<<< HEAD
-    else if (petAgeFilter.value == 'BABY') {
-        var apiUrlFinal = apiUrl + '&age=baby,young'
-    }
-    else if (petAgeFilter.value == 'ADULT') {
-        var apiUrlFinal = apiUrl + '&age=adult'
-    }
-    else if (petAgeFilter.value == 'SENIOR') {
-=======
     else if (petAgeFilter.value == 'Baby') {
         var apiUrlFinal = apiUrl + '&age=baby,young'
     }
@@ -304,7 +265,6 @@ function pageTwo() {
         var apiUrlFinal = apiUrl + '&age=adult'
     }
     else if (petAgeFilter.value == 'Senior') {
->>>>>>> f21b5088970fe2ab54b4b63e676de9ad2b451249
         var apiUrlFinal = apiUrl + '&age=senior'
     }
     fetch(apiUrlFinal, {
@@ -338,10 +298,7 @@ function pageTwo() {
             var petInfoDist = document.createElement('p')
             var petInfoContact = document.createElement('p')
             var petsec = document.createElement('section')
-<<<<<<< HEAD
-=======
             var petBtn = document.createElement('button')
->>>>>>> f21b5088970fe2ab54b4b63e676de9ad2b451249
             if (data.animals[index].photos.length === 0) {
                 continue
             } else if (data.animals[index].contact.email === null && data.animals[index].contact.phone === null) {
@@ -352,15 +309,9 @@ function pageTwo() {
                 if (counter > 12 && counter < 25) {
                     var petPhoto = data.animals[index].photos[0].full
                     petListing.appendChild(petsec)
-<<<<<<< HEAD
-                    peth1.className = 'flexPets-h1'
-                    petsec.append(peth1)
-                    petsec.className = 'card column is-one-third'
-=======
                     petsec.append(peth1)
                     petsec.className = 'card column is-one-third saveFave'
                     petsec.setAttribute('id', `pet${counter}`)
->>>>>>> f21b5088970fe2ab54b4b63e676de9ad2b451249
                     peth1.textContent = cardTemplate
                     petsec.append(petdiv)
                     petdiv.append(petimg)
@@ -373,13 +324,10 @@ function pageTwo() {
                     petInfoSpecies.textContent = `Species: ${petSpecies}`
                     petInfoAge.textContent = `Age: ${petAge}`
                     petInfoContact.textContent = `Contact: ${petEmail} ${petPhone}`
-<<<<<<< HEAD
-=======
                     petdiv.append(petBtn)
                     petBtn.className = 'savePet'
                     petBtn.setAttribute('id', `petbtn${counter}`)
                     petBtn.textContent = `Save ${petName} to favorites`
->>>>>>> f21b5088970fe2ab54b4b63e676de9ad2b451249
                     if (data.animals[index].contact.email === null) {
                         petInfoContact.textContent = `Contact: ${petPhone}`
                     }
@@ -398,10 +346,6 @@ function pageTwo() {
 function pageThree() {
     let counter = 0
     petListing.replaceChildren()
-<<<<<<< HEAD
-=======
-
->>>>>>> f21b5088970fe2ab54b4b63e676de9ad2b451249
     if (petType.value == 'Any animal') {
         var apiUrl = 'https://api.petfinder.com/v2/animals?distance=500&sort=distance&limit=100&status=adoptable&location=' + zipcode.value.trim()
     }
@@ -414,15 +358,6 @@ function pageThree() {
     if (petAgeFilter.value == 'Any age') {
         var apiUrlFinal = apiUrl
     }
-<<<<<<< HEAD
-    else if (petAgeFilter.value == 'BABY') {
-        var apiUrlFinal = apiUrl + '&age=baby,young'
-    }
-    else if (petAgeFilter.value == 'ADULT') {
-        var apiUrlFinal = apiUrl + '&age=adult'
-    }
-    else if (petAgeFilter.value == 'SENIOR') {
-=======
     else if (petAgeFilter.value == 'Baby') {
         var apiUrlFinal = apiUrl + '&age=baby,young'
     }
@@ -430,7 +365,6 @@ function pageThree() {
         var apiUrlFinal = apiUrl + '&age=adult'
     }
     else if (petAgeFilter.value == 'Senior') {
->>>>>>> f21b5088970fe2ab54b4b63e676de9ad2b451249
         var apiUrlFinal = apiUrl + '&age=senior'
     }
     fetch(apiUrlFinal, {
@@ -464,10 +398,7 @@ function pageThree() {
             var petInfoDist = document.createElement('p')
             var petInfoContact = document.createElement('p')
             var petsec = document.createElement('section')
-<<<<<<< HEAD
-=======
             var petBtn = document.createElement('button')
->>>>>>> f21b5088970fe2ab54b4b63e676de9ad2b451249
             if (data.animals[index].photos.length === 0) {
                 continue
             } else if (data.animals[index].contact.email === null && data.animals[index].contact.phone === null) {
@@ -478,15 +409,9 @@ function pageThree() {
                 if (counter > 24 && counter < 37) {
                     var petPhoto = data.animals[index].photos[0].full
                     petListing.appendChild(petsec)
-<<<<<<< HEAD
-                    peth1.className = 'flexPets-h1'
-                    petsec.append(peth1)
-                    petsec.className = 'card column is-one-third'
-=======
                     petsec.append(peth1)
                     petsec.className = 'card column is-one-third saveFave'
                     petsec.setAttribute('id', `pet${counter}`)
->>>>>>> f21b5088970fe2ab54b4b63e676de9ad2b451249
                     peth1.textContent = cardTemplate
                     petsec.append(petdiv)
                     petdiv.append(petimg)
@@ -499,13 +424,10 @@ function pageThree() {
                     petInfoSpecies.textContent = `Species: ${petSpecies}`
                     petInfoAge.textContent = `Age: ${petAge}`
                     petInfoContact.textContent = `Contact: ${petEmail} ${petPhone}`
-<<<<<<< HEAD
-=======
                     petdiv.append(petBtn)
                     petBtn.className = 'savePet'
                     petBtn.setAttribute('id', `petbtn${counter}`)
                     petBtn.textContent = `Save ${petName} to favorites`
->>>>>>> f21b5088970fe2ab54b4b63e676de9ad2b451249
                     if (data.animals[index].contact.email === null) {
                         petInfoContact.textContent = `Contact: ${petPhone}`
                     }
@@ -524,10 +446,6 @@ function pageThree() {
 function pageFour() {
     let counter = 0
     petListing.replaceChildren()
-<<<<<<< HEAD
-=======
-
->>>>>>> f21b5088970fe2ab54b4b63e676de9ad2b451249
     if (petType.value == 'Any animal') {
         var apiUrl = 'https://api.petfinder.com/v2/animals?distance=500&sort=distance&limit=100&status=adoptable&location=' + zipcode.value.trim()
     }
@@ -580,10 +498,7 @@ function pageFour() {
             var petInfoDist = document.createElement('p')
             var petInfoContact = document.createElement('p')
             var petsec = document.createElement('section')
-<<<<<<< HEAD
-=======
             var petBtn = document.createElement('button')
->>>>>>> f21b5088970fe2ab54b4b63e676de9ad2b451249
             if (data.animals[index].photos.length === 0) {
                 continue
             } else if (data.animals[index].contact.email === null && data.animals[index].contact.phone === null) {
@@ -594,23 +509,13 @@ function pageFour() {
                 if (counter > 36 && counter < 49) {
                     var petPhoto = data.animals[index].photos[0].full
                     petListing.appendChild(petsec)
-<<<<<<< HEAD
-                    peth1.className = 'flexPets-h1'
-                    petsec.append(peth1)
-                    petsec.className = 'card column is-one-third'
-=======
                     petsec.append(peth1)
                     petsec.className = 'card column is-one-third saveFave'
                     petsec.setAttribute('id', `pet${counter}`)
->>>>>>> f21b5088970fe2ab54b4b63e676de9ad2b451249
                     peth1.textContent = cardTemplate
                     petsec.append(petdiv)
                     petdiv.append(petimg)
                     petimg.src = petPhoto
-<<<<<<< HEAD
-                    petimg.className = 'petimg'
-=======
->>>>>>> f21b5088970fe2ab54b4b63e676de9ad2b451249
                     petdiv.append(petInfoSpecies)
                     petdiv.append(petInfoAge)
                     petdiv.append(petInfoDist)
@@ -619,13 +524,10 @@ function pageFour() {
                     petInfoSpecies.textContent = `Species: ${petSpecies}`
                     petInfoAge.textContent = `Age: ${petAge}`
                     petInfoContact.textContent = `Contact: ${petEmail} ${petPhone}`
-<<<<<<< HEAD
-=======
                     petdiv.append(petBtn)
                     petBtn.className = 'savePet'
                     petBtn.setAttribute('id', `petbtn${counter}`)
                     petBtn.textContent = `Save ${petName} to favorites`
->>>>>>> f21b5088970fe2ab54b4b63e676de9ad2b451249
                     if (data.animals[index].contact.email === null) {
                         petInfoContact.textContent = `Contact: ${petPhone}`
                     }
@@ -641,14 +543,6 @@ function pageFour() {
     });
 }
 
-<<<<<<< HEAD
-document.querySelector('#searchbtn').addEventListener('click', logAPI)
-document.querySelector('#searchbtn').addEventListener('click', getToken(petFinderURL, userName, passWord))
-// document.querySelector('#page1btn').addEventListener('click', logAPI)
-// document.querySelector('#page2btn').addEventListener('click', pageTwo)
-// document.querySelector('#page3btn').addEventListener('click', pageThree)
-// document.querySelector('#page4btn').addEventListener('click', pageFour)
-=======
 function saveFaves(e) {
     if (e.target.tagName !== "BUTTON") {
         return
@@ -1020,4 +914,3 @@ document.querySelector('#searchbtn').addEventListener('click', createPages)
 document.querySelector('#searchbtn').addEventListener('click', getToken(petFinderURL, userName, passWord))
 document.querySelector('.petContainer').addEventListener('click', saveFaves)
 logAPI2()
->>>>>>> f21b5088970fe2ab54b4b63e676de9ad2b451249
