@@ -61,6 +61,6 @@ A user can simply choose to search for a cat, dog, or both, type in a zip code a
 If you have any questions, please contact us at:
 | Name | Github | Email |
 | ----------- | ----------- | ----------- |
-| Ryan Hickey | [@ryanpjhickey](https://github.com/ryanpjhickey) | email |
-| Kevin Hall | [@KevinHall4255](https://github.com/KevinHall4255) | email |
+| Ryan Hickey | [@ryanpjhickey](https://github.com/ryanpjhickey) | ryanpjhickey@gmail.com |
+| Kevin Hall | [@KevinHall4255](https://github.com/KevinHall4255) | hall96kevin@gmail.com |
 | Jonathon Biala | [@jonathonb1](https://github.com/jonathonb1) | jonathon.biala@gmail.com |
