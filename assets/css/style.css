@@ -64,7 +64,7 @@ main {
 }
 
 div.select.is-medium.is-rounded::after {
-  margin-right: 105px;
+  position: relative;
 }
 
 .card {
@@ -161,7 +161,6 @@ footer {
   -webkit-text-stroke-color: black;
 }
 
-
 #pages {
   display: flex;
   justify-content: center;
@@ -179,8 +178,6 @@ footer {
   margin-right: 5px;
 }
 
-
 .savePet:focus {
   background-color: pink;
 }
-
