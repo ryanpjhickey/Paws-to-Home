@@ -4,6 +4,9 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Paws-to-Home</title>
+    <link rel = "icon" href = 
+    "./assets/images/paw.png" 
+            type = "image/x-icon">
 		<link rel="stylesheet" 
         href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
 		<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
@@ -73,7 +76,7 @@
                     <div class="column">
                         <div>
                         <p class="column-text">Search by type of animal</p>
-                        <div class="select is-success is-medium is-rounded">
+                        <div class="select is-medium is-rounded">
                             <select class="petType">
                               <option>Any animal</option>
                               <option>Cats</option>
@@ -88,7 +91,7 @@
                     <div class="column is-desktop">
                         <div>
                             <p class="column-text" id="zipcode">Search by Zip code</p>
-                            <input id="zip" class="input is-primary is-medium is-success is-rounded" type="text" placeholder="Zip code here">
+                            <input id="zip" class="input is-medium is-rounded" type="text" placeholder="Zip code here">
                         </div>
                         <p id="invalid">Invalid Zipcode!</p>
                     </div>
@@ -99,7 +102,7 @@
                         <div>
                         <p class="column-text">Search by animal age</p>
 
-                        <div class="select is-success is-medium is-rounded drop-down">
+                        <div class="select is-medium is-rounded drop-down">
                             <select class="petAgeFilter">
                               <option>Any age</option>
                               <option>Baby</option>
@@ -114,7 +117,7 @@
             </div>
 
             <div class="submit">
-              <button id="searchbtn" class="button is-primary is-rounded">Search</button>
+              <button id="searchbtn" class="button is-rounded">Search</button>
             </div>
         </section>
         <main id="petListing" class="columns petContainer">
@@ -129,8 +132,7 @@
           <h1 class="title">What we do:</h1>
           <h2 class="subtitle">
             Paws-To-Home is a place where we connect people with animals in a central location.  We provide
-            various pieces of information about pets near you in hopes to provide these animals with a home
-            where they can be loved and cared for.
+            various pieces of information about pets near you in hopes to help these animals find their forever home.
           </h2>
         </section>
         <section class="section is-medium">

@@ -63,6 +63,10 @@ main {
   color: white;
 }
 
+div.select.is-medium.is-rounded::after {
+  margin-right: 105px;
+}
+
 .card {
   flex: 1 0 0;
   padding: 10px;
@@ -105,9 +109,9 @@ main {
   -webkit-appearance: none;
 }
 
-.select:not(.is-multiple):not(.is-loading)::after {
+/* .select:not(.is-multiple):not(.is-loading)::after {
   border-color: transparent;
-}
+} */
 
 .footer-heart {
   height: 50%;
@@ -157,6 +161,7 @@ footer {
   -webkit-text-stroke-color: black;
 }
 
+
 #pages {
   display: flex;
   justify-content: center;
@@ -174,6 +179,8 @@ footer {
   margin-right: 5px;
 }
 
-div.select.is-success.is-medium.is-rounded::after {
-  margin-right: 105px;
+
+.savePet:focus {
+  background-color: pink;
 }
+
