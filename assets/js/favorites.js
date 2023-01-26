@@ -1,6 +1,6 @@
 const showFavoriteListings = (e) => {
     for (let i = 0; i < 48; ++i) {
-        let petz = document.querySelector('#displayAllFaves')
+        let petz = document.querySelector('#petListing')
         let petzdiv = document.createElement('div')
         petz.append(petzdiv)
         petzdiv.setAttribute('id', `displayPet${i + 1}`)
