@@ -53,7 +53,7 @@ main {
 }
 
 .midsec {
-  background-image: url("../images/dogjump.png");
+  background-image: url('../images/dogjump.png');
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -76,7 +76,7 @@ div.select.is-medium.is-rounded::after {
 .card h1 {
   font-weight: bold;
   font-size: large;
-  font-family: "Catamaran", sans-serif;
+  font-family: 'Catamaran', sans-serif;
 }
 
 #invalid {
@@ -122,26 +122,26 @@ div.select.is-medium.is-rounded::after {
 }
 
 .footer {
-  font-family: "DynaPuff", cursive;
+  font-family: 'DynaPuff', cursive;
   text-shadow: 0px 10px 20px;
   color: white;
   font-size: 70px 4vw;
 }
 
 .navbar-item {
-  font-family: "Catamaran", sans-serif;
+  font-family: 'Catamaran', sans-serif;
   color: white;
   font-size: 70px 4vw;
 }
 
 footer {
-  font-family: "Catamaran", sans-serif;
+  font-family: 'Catamaran', sans-serif;
   padding: 1rem 1rem 5rem !important;
   color: black;
 }
 
 .nav-foot {
-  font-family: "Catamaran", sans-serif;
+  font-family: 'Catamaran', sans-serif;
   color: black;
 }
 
@@ -155,7 +155,7 @@ footer {
 }
 
 .center {
-  font-family: "DynaPuff", cursive;
+  font-family: 'DynaPuff', cursive;
   color: hsl(204, 86%, 53%);
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
@@ -180,4 +180,34 @@ footer {
 
 .savePet:focus {
   background-color: pink;
+}
+
+#displayAllFaves {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-columns: auto;
+}
+
+@media screen and (max-width: 1272px) {
+  #displayAllFaves {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  #displayAllFaves {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #displayAllFaves {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #displayAllFaves {
+    grid-template-columns: 1fr;
+  }
 }
