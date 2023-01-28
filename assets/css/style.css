@@ -179,5 +179,9 @@ footer {
 }
 
 .savePet:focus {
+  background-color: rgb(192, 255, 208);
+}
+
+.petdel:focus {
   background-color: pink;
 }

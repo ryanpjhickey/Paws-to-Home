@@ -126,6 +126,8 @@ function logAPI() {
                     petsec.append(petdiv)
                     petdiv.append(petimg)
                     petimg.src = petPhoto
+                    petimg.className = 'petimageClass'
+                    petimg.setAttribute('id', `petimg${counter}`)
                     petdiv.append(petInfoSpecies)
                     petdiv.append(petInfoAge)
                     petdiv.append(petInfoDist)
@@ -226,6 +228,8 @@ function pageOne() {
                     petsec.append(petdiv)
                     petdiv.append(petimg)
                     petimg.src = petPhoto
+                    petimg.className = 'petimageClass'
+                    petimg.setAttribute('id', `petimg${counter}`)
                     petdiv.append(petInfoSpecies)
                     petdiv.append(petInfoAge)
                     petdiv.append(petInfoDist)
@@ -325,6 +329,8 @@ function pageTwo() {
                     petsec.append(petdiv)
                     petdiv.append(petimg)
                     petimg.src = petPhoto
+                    petimg.className = 'petimageClass'
+                    petimg.setAttribute('id', `petimg${counter}`)
                     petdiv.append(petInfoSpecies)
                     petdiv.append(petInfoAge)
                     petdiv.append(petInfoDist)
@@ -424,6 +430,8 @@ function pageThree() {
                     petsec.append(petdiv)
                     petdiv.append(petimg)
                     petimg.src = petPhoto
+                    petimg.className = 'petimageClass'
+                    petimg.setAttribute('id', `petimg${counter}`)
                     petdiv.append(petInfoSpecies)
                     petdiv.append(petInfoAge)
                     petdiv.append(petInfoDist)
@@ -523,6 +531,8 @@ function pageFour() {
                     petsec.append(petdiv)
                     petdiv.append(petimg)
                     petimg.src = petPhoto
+                    petimg.className = 'petimageClass'
+                    petimg.setAttribute('id', `petimg${counter}`)
                     petdiv.append(petInfoSpecies)
                     petdiv.append(petInfoAge)
                     petdiv.append(petInfoDist)
@@ -554,11 +564,22 @@ function saveFaves(e) {
     if (e.target.tagName !== "BUTTON") {
         return
     }
-    for (let petListI = 0; petListI < 48; petListI++) {
-        if (e.target.id === `petbtn${petListI + 1}`) {
-            var petSave = document.getElementById(`pet${petListI + 1}`).outerHTML
-            var lskey = `pet${petListI + 1}`
+    for (let i = 0; i < 48; i++) {
+        if (e.target.id === `petbtn${i + 1}`) {
+            var parent = document.getElementById(`pet${i + 1}`)
+            petName = parent.firstChild
+            var petSave = document.getElementById(`pet${i + 1}`).outerHTML
+            document.querySelector(`#petbtn${i + 1}`).textContent = `${petName.textContent} saved to favorites!`
+            var lskey = `pet${i + 1}`
             localStorage.setItem(lskey, petSave)
+
+
+            //code to attempt to prevent duplicates by checking ls for duplicate images?
+            // var petImg = document.getElementById(`petimg${i + 1}`)
+            // var lsimg = `petimg${i + 1}`
+            // petImg.removeAttribute("id")
+            // localStorage.setItem(lsimg, petImg.outerHTML)
+
             console.log(petSave)
             console.log(localStorage)
         }
