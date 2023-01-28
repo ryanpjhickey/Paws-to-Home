@@ -15,7 +15,7 @@ const showFavoriteListings = (e) => {
             var petName = parent.firstChild;
             var sibling = petName.nextSibling;
             var btn = sibling.lastElementChild; 
-    
+            document.querySelector(`#petbtn${i + 1}`).textContent = `Remove ${petName.textContent} from favorites`
 
             // Add event listener to button/s
              btn.addEventListener('click', (e) => {
