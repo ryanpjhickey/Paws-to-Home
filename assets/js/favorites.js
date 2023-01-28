@@ -5,8 +5,60 @@ const showFavoriteListings = (e) => {
         petz.append(petzdiv)
         petzdiv.setAttribute('id', `displayPet${i + 1}`)
         document.querySelector(`#displayPet${i + 1}`).outerHTML = localStorage.getItem(`pet${i + 1}`);
-    }
+
+
+        // Select section
+        var parent = document.getElementById(`pet${i + 1}`);
+
+        // Check the section if is undifined or not
+        if(parent) {
+            var petName = parent.firstChild;
+            var sibling = petName.nextSibling;
+            var btn = sibling.lastElementChild; 
+    
+
+            // Add event listener to button/s
+             btn.addEventListener('click', (e) => {
+                var item = localStorage.getItem(`pet${i + 1}`);
+                var parent = document.getElementById(`pet${i + 1}`);
+                var button = document.getElementById(`${e.target.id}`)
+                var petName = parent.firstChild;
+     
+                 // Check the favorite pet in local storage
+                 if(item) {
+                     button.textContent = `Are you sure you want to unfavorite ${petName.textContent}?`
+     
+                    // Delete the favorite pet in local storage
+                     localStorage.removeItem(`pet${i + 1}`);
+                    } else {
+
+                     button.textContent = `Removing ${petName.textContent}...`
+
+                     // Delay for 2s
+                     setTimeout(() => {
+                         deltete(i)
+                     }, 2000)
+
+
+                     console.log(`${petName.textContent} is deleted`);
+                 }
+             
+             })
+         
+        }
+       }
+
 };
+
+// Delete favorite visually 
+function deltete(item) {
+    // End the function
+    if(!item) return
+
+    // remove the entire section element from  DOM
+    document.getElementById(`pet${item + 1}`).remove()
+}
+
 
 showFavoriteListings()
 
