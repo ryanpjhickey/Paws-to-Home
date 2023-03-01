@@ -22,9 +22,10 @@ Paws-To-Home is a webpage that helps to connect people with cats and/or dogs the
 
 <p float="left">
 <img src="https://www.logolynx.com/images/logolynx/s_1a/1a6dec46e15b0c11c178b4c7d1efd937.png" width="100" height="100">
-<img src="https://static.gunnarpeipman.com/wp-content/uploads/2020/09/aspnet-featured.png" width="100" height="100">
+<img src="https://www.logolynx.com/images/logolynx/s_3b/3b9d42a73e06ccac04deb9073e5235ba.png" width="100" height="100">
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png?20141107110902>" width="100" height="100">
 <img src="https://www.logolynx.com/images/logolynx/s_7c/7cd9586a595db92320ebf7beab22a7af.png" width="100" height="100">
+<img src="https://logosandtypes.com/wp-content/uploads/2020/11/bulma.svg" width="100" height="100">
 </p>
 
 ---
