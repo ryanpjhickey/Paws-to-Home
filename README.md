@@ -50,8 +50,7 @@ A user can simply choose to search for a cat, dog, or both, type in a zip code a
 
 ## Contributors
 
-[<img src="https://ca.slack-edge.com/T03EP850QMA-U03MKQ6HKB3-2c9d97da4786-512" width="75" height="75">](https://github.com/ryanpjhickey)
-[<img src="https://ca.slack-edge.com/T03EP850QMA-U03MKSQRW6P-3ef746271a44-512" width="75" height="75">](https://github.com/KevinHall4255)
+[<img src="https://avatars.githubusercontent.com/u/108383347?v=4.png" width="75" height="75">](https://github.com/ryanpjhickey)
 [<img src="https://ca.slack-edge.com/T03EP850QMA-U03LRRGR9SA-26e6f5444e8e-512" width="75" height="75">](https://github.com/jonathonb1)
 
 ---
@@ -62,5 +61,4 @@ If you have any questions, please contact us at:
 | Name | Github | Email |
 | ----------- | ----------- | ----------- |
 | Ryan Hickey | [@ryanpjhickey](https://github.com/ryanpjhickey) | ryanpjhickey@gmail.com |
-| Kevin Hall | [@KevinHall4255](https://github.com/KevinHall4255) | hall96kevin@gmail.com |
 | Jonathon Biala | [@jonathonb1](https://github.com/jonathonb1) | jonathon.biala@gmail.com |
